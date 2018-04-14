@@ -10,7 +10,7 @@ BEGIN
 END
 GO 
 --them phieu dang ky
-CREATE PROC SP_ThemPhieuDangKy(@MaPhieuDK VARCHAR(5),@MaKH VARCHAR(4),@MaPhong VARCHAR(4),@MaNV VARCHAR(4),@NgayLap DATE, @TienCoc INT )
+CREATE PROC SP_ThemPhieuDangKy(@MaPhieuDK VARCHAR(10),@MaKH VARCHAR(10),@MaPhong VARCHAR(10),@MaNV VARCHAR(10),@NgayLap DATE, @TienCoc INT )
 AS
 BEGIN
 	INSERT dbo.PhieuDangKy
@@ -20,7 +20,7 @@ GO
 
 
 --sua phieu dang ky
-CREATE PROC SP_SuaPhieuDangKy(@MaPhieuDK VARCHAR(5),@MaKH VARCHAR(4),@MaPhong VARCHAR(4),@MaNV VARCHAR(4),@NgayLap DATE, @TienCoc INT)
+CREATE PROC SP_SuaPhieuDangKy(@MaPhieuDK VARCHAR(10),@MaKH VARCHAR(10),@MaPhong VARCHAR(10),@MaNV VARCHAR(10),@NgayLap DATE, @TienCoc INT)
 AS
 BEGIN
 	UPDATE dbo.PhieuDangKy
@@ -29,7 +29,7 @@ BEGIN
 END
 GO
 --xoa phieudang ky
-CREATE PROC SP_XoaPhieuDangKy(@MaPhieuDangKy VARCHAR(5))
+CREATE PROC SP_XoaPhieuDangKy(@MaPhieuDangKy VARCHAR(10))
 AS
 BEGIN
 	DELETE dbo.PhieuDangKy

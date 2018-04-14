@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\HoaDonBUS.cs" />
+    <Compile Include="BUS\NhanVienBus.cs" />
     <Compile Include="BUS\PhieuDangKyBUS.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KetNoi.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhieuDangKyDAL.cs" />
     <Compile Include="Entity\HoaDonEntity.cs" />
+    <Compile Include="Entity\NhanVienEntity.cs" />
     <Compile Include="Entity\PhieuDangKy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +63,12 @@
     </Compile>
     <Compile Include="View\frmHoaDon.Designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmPhieuDangKy.cs">
       <SubType>Form</SubType>
@@ -78,6 +87,9 @@
     </Compile>
     <EmbeddedResource Include="View\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPhieuDangKy.resx">
       <DependentUpon>frmPhieuDangKy.cs</DependentUpon>
