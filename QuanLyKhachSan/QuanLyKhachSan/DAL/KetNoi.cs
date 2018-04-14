@@ -6,20 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace DAL
+namespace QuanLyKhachSan.DAL
 {
     public class KetNoi
     {
         private SqlConnection _connect;
         public KetNoi()
         {
-            _connect = new SqlConnection(@"Data Source=THANHVUONG\SQLEXPRESS88;Initial Catalog=QuanLyThuVienMTA;Integrated Security=True");
+            _connect = new SqlConnection(@"Data Source=THANHVUONG\SQLEXPRESS88;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
         }
         public DataTable GetData(string strSql)
         {
-            SqlDataAdapter da = new SqlDataAdapter(strSql,_connect);
+            SqlDataAdapter da = new SqlDataAdapter(strSql, _connect);
             DataTable dt = new DataTable();
-            if(ConnectionState.Closed==_connect.State)
+            if (ConnectionState.Closed == _connect.State)
             {
                 _connect.Open();
             }
@@ -65,7 +65,7 @@ namespace DAL
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
-            if (ConnectionState.Closed==_connect.State)
+            if (ConnectionState.Closed == _connect.State)
             {
                 _connect.Open();
             }
