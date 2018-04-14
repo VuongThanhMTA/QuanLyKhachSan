@@ -43,30 +43,30 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
             this.dpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtCMTND = new System.Windows.Forms.TextBox();
             this.txtLuong = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbTimKiem = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtCMTND = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.cmbTimKiem = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ma_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gioi_Tinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ngay_Sinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CMTND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
@@ -90,6 +90,7 @@
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -116,6 +117,7 @@
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // label1
             // 
@@ -223,7 +225,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.btnHuy);
             this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnThoat);
@@ -286,6 +289,22 @@
             this.dpNgaySinh.Size = new System.Drawing.Size(162, 25);
             this.dpNgaySinh.TabIndex = 30;
             // 
+            // txtSDT
+            // 
+            this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(122, 411);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(162, 26);
+            this.txtSDT.TabIndex = 15;
+            // 
+            // txtCMTND
+            // 
+            this.txtCMTND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMTND.Location = new System.Drawing.Point(122, 362);
+            this.txtCMTND.Name = "txtCMTND";
+            this.txtCMTND.Size = new System.Drawing.Size(162, 26);
+            this.txtCMTND.TabIndex = 15;
+            // 
             // txtLuong
             // 
             this.txtLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,6 +329,24 @@
             this.txtTenNV.Size = new System.Drawing.Size(162, 26);
             this.txtTenNV.TabIndex = 11;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 314);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Lương :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(16, 411);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 17);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "SDT : ";
+            // 
             // txtMaNV
             // 
             this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -317,6 +354,15 @@
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(162, 26);
             this.txtMaNV.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 362);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 17);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "CMTND :";
             // 
             // label7
             // 
@@ -326,15 +372,6 @@
             this.label7.Size = new System.Drawing.Size(78, 17);
             this.label7.TabIndex = 4;
             this.label7.Text = "Ngày Sinh:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 314);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Lương :";
             // 
             // label6
             // 
@@ -372,58 +409,26 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Nhân Viên";
             // 
-            // cbTimKiem
+            // cmbTimKiem
             // 
-            this.cbTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTimKiem.FormattingEnabled = true;
-            this.cbTimKiem.Items.AddRange(new object[] {
+            this.cmbTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTimKiem.FormattingEnabled = true;
+            this.cmbTimKiem.Items.AddRange(new object[] {
             "Theo Mã Nhân Viên",
             "Theo Tên Nhân Viên",
             "Theo Giới Tính",
             "Theo Lương",
-            "Theo Mã Khu",
-            "Theo Ngày Sinh"});
-            this.cbTimKiem.Location = new System.Drawing.Point(597, 22);
-            this.cbTimKiem.Name = "cbTimKiem";
-            this.cbTimKiem.Size = new System.Drawing.Size(164, 27);
-            this.cbTimKiem.TabIndex = 33;
-            this.cbTimKiem.Text = "Theo Mã Nhân Viên";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 362);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 17);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "CMTND :";
-            // 
-            // txtCMTND
-            // 
-            this.txtCMTND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMTND.Location = new System.Drawing.Point(122, 362);
-            this.txtCMTND.Name = "txtCMTND";
-            this.txtCMTND.Size = new System.Drawing.Size(162, 26);
-            this.txtCMTND.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 411);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 17);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "SDT : ";
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(122, 411);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(162, 26);
-            this.txtSDT.TabIndex = 15;
+            "Theo Địa Chỉ",
+            "Theo Ngày Sinh",
+            "Theo CMTND",
+            "Theo SĐT"});
+            this.cmbTimKiem.Location = new System.Drawing.Point(597, 22);
+            this.cmbTimKiem.Name = "cmbTimKiem";
+            this.cmbTimKiem.Size = new System.Drawing.Size(164, 27);
+            this.cmbTimKiem.TabIndex = 33;
+            this.cmbTimKiem.Text = "Theo Mã Nhân Viên";
             // 
             // groupBox2
             // 
@@ -444,12 +449,12 @@
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
-            this.Ma_NV,
-            this.Ten_NV,
-            this.Gioi_Tinh,
+            this.MaNV,
+            this.TenNV,
+            this.GioiTinh,
             this.Luong,
             this.DiaChi,
-            this.Ngay_Sinh,
+            this.NgaySinh,
             this.CMTND,
             this.SDT});
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -466,27 +471,27 @@
             this.STT.Name = "STT";
             this.STT.Width = 70;
             // 
-            // Ma_NV
+            // MaNV
             // 
-            this.Ma_NV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ma_NV.DataPropertyName = "MaNV";
-            this.Ma_NV.HeaderText = "Mã NV";
-            this.Ma_NV.Name = "Ma_NV";
+            this.MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã NV";
+            this.MaNV.Name = "MaNV";
             // 
-            // Ten_NV
+            // TenNV
             // 
-            this.Ten_NV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ten_NV.DataPropertyName = "TenNV";
-            this.Ten_NV.HeaderText = "Họ Tên";
-            this.Ten_NV.Name = "Ten_NV";
+            this.TenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Họ Tên";
+            this.TenNV.Name = "TenNV";
             // 
-            // Gioi_Tinh
+            // GioiTinh
             // 
-            this.Gioi_Tinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gioi_Tinh.DataPropertyName = "GioiTinh";
-            this.Gioi_Tinh.HeaderText = "Giới Tính";
-            this.Gioi_Tinh.Name = "Gioi_Tinh";
-            this.Gioi_Tinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới Tính";
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Luong
             // 
@@ -502,12 +507,12 @@
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.Name = "DiaChi";
             // 
-            // Ngay_Sinh
+            // NgaySinh
             // 
-            this.Ngay_Sinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ngay_Sinh.DataPropertyName = "NgaySinh";
-            this.Ngay_Sinh.HeaderText = "Ngày Sinh";
-            this.Ngay_Sinh.Name = "Ngay_Sinh";
+            this.NgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
             // 
             // CMTND
             // 
@@ -548,9 +553,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cbTimKiem);
+            this.Controls.Add(this.cmbTimKiem);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
@@ -594,18 +599,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbTimKiem;
+        private System.Windows.Forms.ComboBox cmbTimKiem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvNhanVien;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ma_NV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_NV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gioi_Tinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Luong;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ngay_Sinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn CMTND;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.Label label10;
     }
 }

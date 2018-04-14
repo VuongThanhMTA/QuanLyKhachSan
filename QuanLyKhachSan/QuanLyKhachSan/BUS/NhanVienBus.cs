@@ -33,5 +33,9 @@ namespace QuanLyKhachSan.BUS
         {
             return Dal.TangMa();
         }
+        public DataTable TimKiem(string str)
+        {
+            return Dal.TimKiem(str);
+        }
     }
 }

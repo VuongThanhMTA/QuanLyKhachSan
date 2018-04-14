@@ -193,5 +193,49 @@ namespace QuanLyKhachSan.View
             else
                 HienThi();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (cmbTimKiem.Text == "Theo Mã Nhân Viên")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Ma_NV like '%" + txtTimKiem.Text + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo Tên Nhân Viên")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Ten_NV like '%" + txtTimKiem.Text + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo Giới Tính")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Gioi_Tinh like '%" + txtTimKiem.Text + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo Lương")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Luong like '%" + txtTimKiem.Text + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo Địa Chỉ")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where DiaChi like '%" + txtTimKiem.Text + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo Ngày Sinh")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Ngay_Sinh like '%" + txtTimKiem.Text + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo CMTND")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where CMTND like '%" + txtTimKiem.Text + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo SĐT")
+            {
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where SDT like '%" + txtTimKiem.Text + "%'");
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            HienThi();
+            DisEnl(false);
+            txtTimKiem.Text = "";
+            cmbTimKiem.Text = "";
+        }
     }
 }
