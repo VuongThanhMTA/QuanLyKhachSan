@@ -1,0 +1,81 @@
+USE master
+GO 
+CREATE  DATABASE QuanLyKhachSan
+
+GO
+USE QuanLyKhachSan
+
+GO 
+CREATE TABLE NhanVien
+(
+	MaNV VARCHAR(5) PRIMARY KEY,
+	TenNV NVARCHAR(30),
+	GioiTinh NVARCHAR(5),
+	NgaySinh	DATE,
+	DiaChi NVARCHAR(50),
+	CMND   NCHAR(15),
+	SDT   NCHAR(12)
+)
+
+GO 
+CREATE TABLE KhachHang
+(
+	MaKH VARCHAR(5) PRIMARY KEY,
+	TenKH NVARCHAR(30),
+	GioiTinh NVARCHAR(5),
+	Tuoi INT ,
+	DiaChi NVARCHAR(50),
+	CMND   NCHAR(15),
+	SDT   NCHAR(12)
+)
+
+GO 
+CREATE TABLE LoaiPhong
+(
+	MaLoaiPhong VARCHAR(5) PRIMARY KEY,
+	LoaiPhong NVARCHAR(50)
+)
+
+GO 
+CREATE TABLE Phong(
+	MaPhong VARCHAR(5) PRIMARY KEY,
+	TenPhong NVARCHAR(50),
+	MaLoaiPhong VARCHAR(5),
+	TrangThai NVARCHAR(50),
+	FOREIGN KEY(MaLoaiPhong) REFERENCES dbo.LoaiPhong(MaLoaiPhong)
+)
+
+GO 
+CREATE TABLE PhieuDangKy(
+	MaPhieuDK VARCHAR(5) PRIMARY KEY,
+	MaKH VARCHAR(5),
+	MaPhong VARCHAR(5),
+	MaNV VARCHAR(5),
+	NgayLap DATE ,
+	TienCoc INT ,
+	FOREIGN KEY(MaKH) REFERENCES dbo.KhachHang(MaKH),
+	FOREIGN KEY(MaNV) REFERENCES dbo.NhanVien(MaNV),
+	FOREIGN KEY(MaPhong) REFERENCES dbo.Phong(MaPhong)
+)
+
+GO 
+CREATE TABLE PhieuDichVu(
+	MaPhieuDV VARCHAR(5) PRIMARY KEY,
+	TenDV NVARCHAR(50),
+	MaPhieuDK VARCHAR(5),
+	Gia INT ,
+	FOREIGN KEY(MaPhieuDK) REFERENCES dbo.PhieuDangKy(MaPhieuDK)
+)
+
+GO 
+CREATE TABLE HoaDon(
+	MaHD VARCHAR(5) PRIMARY KEY,
+	MaPhieuDK VARCHAR(5),
+	MaNV VARCHAR(5),
+	NgayThanhToan DATE,
+	TongTien INT ,
+
+	FOREIGN KEY(MaPhieuDK) REFERENCES dbo.PhieuDangKy(MaPhieuDK),
+	FOREIGN KEY(MaNV) REFERENCES dbo.NhanVien(MaNV)
+)
+

@@ -1,0 +1,9 @@
+G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+G:\GitHub\Project_QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
