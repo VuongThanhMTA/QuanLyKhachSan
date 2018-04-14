@@ -37,3 +37,6 @@ E:\Kỳ 6\Thực Tập Nhóm\Bài Tập\GitHub\QuanLyKhachSan\QuanLyKhachSan\Qua
 E:\Kỳ 6\Thực Tập Nhóm\Bài Tập\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhieuDangKy.resources
 E:\Kỳ 6\Thực Tập Nhóm\Bài Tập\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
 E:\Kỳ 6\Thực Tập Nhóm\Bài Tập\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmNhanVien.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
