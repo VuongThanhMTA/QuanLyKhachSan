@@ -49,7 +49,7 @@ BEGIN
 END 
 
 GO 
-ALTER PROC SP_ThemHoaDon (@MaHD VARCHAR(5), @MaNV VARCHAR(5),@MaPhieuDK VARCHAR(5), @NgayThanhToan DATE,@TongTien INT)
+CREATE PROC SP_ThemHoaDon (@MaHD VARCHAR(5), @MaNV VARCHAR(5),@MaPhieuDK VARCHAR(5), @NgayThanhToan DATE,@TongTien INT)
 AS
 BEGIN
 	INSERT dbo.HoaDon( MaHD , MaPhieuDK ,MaNV ,NgayThanhToan ,TongTien)

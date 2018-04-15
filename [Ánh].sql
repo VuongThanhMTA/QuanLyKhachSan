@@ -1,4 +1,5 @@
 ﻿-- Sửa CSDL
+USE QuanLyKhachSan
 go
 DROP TABLE dbo.PhieuDichVu
 -- Thêm bảng PhieuDichVu và DichVu
