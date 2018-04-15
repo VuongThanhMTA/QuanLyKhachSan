@@ -35,4 +35,4 @@ END
 ALTER TABLE dbo.KhachHang 
 DROP COLUMN NamSinh
 ALTER TABLE dbo.KhachHang
-ADD  NamSinh DATE
+ADD  NamSinh int
