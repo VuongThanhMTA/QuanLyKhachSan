@@ -16,6 +16,7 @@ namespace QuanLyKhachSan.View
         PhieuDangKy phieudk = new PhieuDangKy();
         PhieuDangKyBUS phieudkbus = new PhieuDangKyBUS();
         private int fluu = 1;
+        public static string MaKH1;
         private void DisEnl(bool e)
         {
             btnThem.Enabled = !e;
@@ -30,7 +31,6 @@ namespace QuanLyKhachSan.View
             cmbMaNV.Enabled = e;
             dateNgayLap.Enabled = e;
             txtTienCoc.Enabled = e;
-            // txtTimKiem.Enabled = e;
         }
         private void clearData()
         {
@@ -187,6 +187,18 @@ namespace QuanLyKhachSan.View
             cmbMaKH.DisplayMember = "MaKH";
             cmbMaPhong.DataSource = phieudkbus.XemPhieuDK("select * from Phong");
             cmbMaPhong.DisplayMember = "MaPhong";
+        }
+
+        private void dgvPhieuDK_DoubleClick(object sender, EventArgs e)
+        {
+            frmXemThngTinKhachHang xem = new frmXemThngTinKhachHang();
+            xem.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmXemThngTinKhachHang xem = new frmXemThngTinKhachHang();
+            xem.Show();
         }
     }
 }

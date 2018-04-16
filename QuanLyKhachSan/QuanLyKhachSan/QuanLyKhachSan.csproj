@@ -87,6 +87,12 @@
     <Compile Include="View\frmPhieuDangKy.designer.cs">
       <DependentUpon>frmPhieuDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmXemThngTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmXemThngTinKhachHang.designer.cs">
+      <DependentUpon>frmXemThngTinKhachHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPhieuDangKy.resx">
       <DependentUpon>frmPhieuDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmXemThngTinKhachHang.resx">
+      <DependentUpon>frmXemThngTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

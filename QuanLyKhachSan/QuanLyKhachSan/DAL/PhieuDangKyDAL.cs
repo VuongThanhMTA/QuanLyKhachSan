@@ -20,6 +20,11 @@ namespace QuanLyKhachSan.DAL
         {
             return kn.GetData(str);
         }
+        public DataTable XemThongTinKhachHangDangKyPhong(string id)
+        {
+            SqlParameter[] para = { new SqlParameter("MaKH", id) };
+            return kn.GetData("XemThongTinKhachHangDangKyPhong", para);
+        }
         public int ThemPhieuDangKy(PhieuDangKy phieudk)
         {
             SqlParameter[] para =

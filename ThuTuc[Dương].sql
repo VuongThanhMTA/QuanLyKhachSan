@@ -36,3 +36,14 @@ BEGIN
 	WHERE MaPhieuDK=@MaPhieuDangKy
 END
 GO
+--thu tuc XemThongTinKhachHangDangKyPhong
+CREATE PROC XemThongTinKhachHangDangKyPhong
+AS 
+BEGIN
+	SELECT TenKH,TenPhong,LoaiPhong,SDT,CMND FROM dbo.KhachHang JOIN dbo.PhieuDangKy
+	ON PhieuDangKy.MaKH = KhachHang.MaKH
+	JOIN dbo.Phong 
+	ON Phong.MaPhong = PhieuDangKy.MaPhong
+	JOIN dbo.LoaiPhong 
+	ON LoaiPhong.MaLoaiPhong = Phong.MaLoaiPhong
+END

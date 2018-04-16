@@ -38,7 +38,18 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvPhieuDK = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbMaNV = new System.Windows.Forms.ComboBox();
+            this.cmbMaPhong = new System.Windows.Forms.ComboBox();
+            this.cmbMaKH = new System.Windows.Forms.ComboBox();
+            this.dateNgayLap = new System.Windows.Forms.DateTimePicker();
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaPhieuDk = new System.Windows.Forms.TextBox();
@@ -48,17 +59,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbMaKH = new System.Windows.Forms.ComboBox();
-            this.cmbMaPhong = new System.Windows.Forms.ComboBox();
-            this.cmbMaNV = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDK)).BeginInit();
@@ -67,6 +68,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.btnHuy);
             this.groupBox4.Controls.Add(this.btnLuu);
             this.groupBox4.Controls.Add(this.btnThem);
@@ -74,9 +76,9 @@
             this.groupBox4.Controls.Add(this.btnThoat);
             this.groupBox4.Controls.Add(this.btnXoa);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(404, 390);
+            this.groupBox4.Location = new System.Drawing.Point(404, 380);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(625, 98);
+            this.groupBox4.Size = new System.Drawing.Size(625, 108);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chức Năng";
@@ -87,7 +89,7 @@
             this.btnHuy.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuy.Location = new System.Drawing.Point(413, 17);
+            this.btnHuy.Location = new System.Drawing.Point(355, 25);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(68, 75);
             this.btnHuy.TabIndex = 10;
@@ -102,7 +104,7 @@
             this.btnLuu.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuu.Location = new System.Drawing.Point(318, 17);
+            this.btnLuu.Location = new System.Drawing.Point(272, 25);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(68, 75);
             this.btnLuu.TabIndex = 9;
@@ -117,7 +119,7 @@
             this.btnThem.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(31, 17);
+            this.btnThem.Location = new System.Drawing.Point(18, 25);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(68, 75);
             this.btnThem.TabIndex = 3;
@@ -132,7 +134,7 @@
             this.btnSua.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(126, 17);
+            this.btnSua.Location = new System.Drawing.Point(103, 25);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(64, 75);
             this.btnSua.TabIndex = 4;
@@ -147,7 +149,7 @@
             this.btnThoat.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(506, 17);
+            this.btnThoat.Location = new System.Drawing.Point(447, 25);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(70, 75);
             this.btnThoat.TabIndex = 6;
@@ -162,7 +164,7 @@
             this.btnXoa.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(221, 17);
+            this.btnXoa.Location = new System.Drawing.Point(189, 25);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(63, 75);
             this.btnXoa.TabIndex = 5;
@@ -200,6 +202,61 @@
             this.dgvPhieuDK.TabIndex = 0;
             this.dgvPhieuDK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuDK_CellClick);
             this.dgvPhieuDK.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvPhieuDK_RowPrePaint);
+            this.dgvPhieuDK.DoubleClick += new System.EventHandler(this.dgvPhieuDK_DoubleClick);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 40;
+            // 
+            // MaPhieuDK
+            // 
+            this.MaPhieuDK.DataPropertyName = "MaPhieuDK";
+            this.MaPhieuDK.FillWeight = 504.4586F;
+            this.MaPhieuDK.HeaderText = "Mã phiếu đăng ký";
+            this.MaPhieuDK.Name = "MaPhieuDK";
+            this.MaPhieuDK.Width = 170;
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "MaKH";
+            this.MaKH.FillWeight = 19.10828F;
+            this.MaKH.HeaderText = "Mã khách hàng";
+            this.MaKH.Name = "MaKH";
+            this.MaKH.Width = 150;
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.FillWeight = 19.10828F;
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.Name = "MaPhong";
+            this.MaPhong.Width = 150;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.FillWeight = 19.10828F;
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.Width = 150;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "NgayLap";
+            this.NgayLap.FillWeight = 19.10828F;
+            this.NgayLap.HeaderText = "Ngày lập phiếu";
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.Width = 150;
+            // 
+            // TienCoc
+            // 
+            this.TienCoc.DataPropertyName = "TienCoc";
+            this.TienCoc.FillWeight = 19.10828F;
+            this.TienCoc.HeaderText = "Tiền cọc";
+            this.TienCoc.Name = "TienCoc";
+            this.TienCoc.Width = 150;
             // 
             // groupBox1
             // 
@@ -222,6 +279,38 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin phiếu đăng ký";
+            // 
+            // cmbMaNV
+            // 
+            this.cmbMaNV.FormattingEnabled = true;
+            this.cmbMaNV.Location = new System.Drawing.Point(162, 239);
+            this.cmbMaNV.Name = "cmbMaNV";
+            this.cmbMaNV.Size = new System.Drawing.Size(180, 27);
+            this.cmbMaNV.TabIndex = 19;
+            // 
+            // cmbMaPhong
+            // 
+            this.cmbMaPhong.FormattingEnabled = true;
+            this.cmbMaPhong.Location = new System.Drawing.Point(162, 172);
+            this.cmbMaPhong.Name = "cmbMaPhong";
+            this.cmbMaPhong.Size = new System.Drawing.Size(180, 27);
+            this.cmbMaPhong.TabIndex = 19;
+            // 
+            // cmbMaKH
+            // 
+            this.cmbMaKH.FormattingEnabled = true;
+            this.cmbMaKH.Location = new System.Drawing.Point(162, 113);
+            this.cmbMaKH.Name = "cmbMaKH";
+            this.cmbMaKH.Size = new System.Drawing.Size(180, 27);
+            this.cmbMaKH.TabIndex = 19;
+            // 
+            // dateNgayLap
+            // 
+            this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateNgayLap.Location = new System.Drawing.Point(162, 298);
+            this.dateNgayLap.Name = "dateNgayLap";
+            this.dateNgayLap.Size = new System.Drawing.Size(180, 26);
+            this.dateNgayLap.TabIndex = 18;
             // 
             // txtTienCoc
             // 
@@ -303,91 +392,16 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "PHIẾU ĐĂNG KÝ";
             // 
-            // dateNgayLap
+            // button1
             // 
-            this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNgayLap.Location = new System.Drawing.Point(162, 298);
-            this.dateNgayLap.Name = "dateNgayLap";
-            this.dateNgayLap.Size = new System.Drawing.Size(180, 26);
-            this.dateNgayLap.TabIndex = 18;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 40;
-            // 
-            // MaPhieuDK
-            // 
-            this.MaPhieuDK.DataPropertyName = "MaPhieuDK";
-            this.MaPhieuDK.FillWeight = 504.4586F;
-            this.MaPhieuDK.HeaderText = "Mã phiếu đăng ký";
-            this.MaPhieuDK.Name = "MaPhieuDK";
-            this.MaPhieuDK.Width = 170;
-            // 
-            // MaKH
-            // 
-            this.MaKH.DataPropertyName = "MaKH";
-            this.MaKH.FillWeight = 19.10828F;
-            this.MaKH.HeaderText = "Mã khách hàng";
-            this.MaKH.Name = "MaKH";
-            this.MaKH.Width = 150;
-            // 
-            // MaPhong
-            // 
-            this.MaPhong.DataPropertyName = "MaPhong";
-            this.MaPhong.FillWeight = 19.10828F;
-            this.MaPhong.HeaderText = "Mã phòng";
-            this.MaPhong.Name = "MaPhong";
-            this.MaPhong.Width = 150;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.FillWeight = 19.10828F;
-            this.MaNV.HeaderText = "Mã nhân viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 150;
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "NgayLap";
-            this.NgayLap.FillWeight = 19.10828F;
-            this.NgayLap.HeaderText = "Ngày lập phiếu";
-            this.NgayLap.Name = "NgayLap";
-            this.NgayLap.Width = 150;
-            // 
-            // TienCoc
-            // 
-            this.TienCoc.DataPropertyName = "TienCoc";
-            this.TienCoc.FillWeight = 19.10828F;
-            this.TienCoc.HeaderText = "Tiền cọc";
-            this.TienCoc.Name = "TienCoc";
-            this.TienCoc.Width = 150;
-            // 
-            // cmbMaKH
-            // 
-            this.cmbMaKH.FormattingEnabled = true;
-            this.cmbMaKH.Location = new System.Drawing.Point(162, 113);
-            this.cmbMaKH.Name = "cmbMaKH";
-            this.cmbMaKH.Size = new System.Drawing.Size(180, 27);
-            this.cmbMaKH.TabIndex = 19;
-            // 
-            // cmbMaPhong
-            // 
-            this.cmbMaPhong.FormattingEnabled = true;
-            this.cmbMaPhong.Location = new System.Drawing.Point(162, 172);
-            this.cmbMaPhong.Name = "cmbMaPhong";
-            this.cmbMaPhong.Size = new System.Drawing.Size(180, 27);
-            this.cmbMaPhong.TabIndex = 19;
-            // 
-            // cmbMaNV
-            // 
-            this.cmbMaNV.FormattingEnabled = true;
-            this.cmbMaNV.Location = new System.Drawing.Point(162, 239);
-            this.cmbMaNV.Name = "cmbMaNV";
-            this.cmbMaNV.Size = new System.Drawing.Size(180, 27);
-            this.cmbMaNV.TabIndex = 19;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(533, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 75);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Xem thông tin khách hàng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPhieuDangKy
             // 
@@ -444,5 +458,6 @@
         private System.Windows.Forms.ComboBox cmbMaNV;
         private System.Windows.Forms.ComboBox cmbMaPhong;
         private System.Windows.Forms.ComboBox cmbMaKH;
+        private System.Windows.Forms.Button button1;
     }
 }

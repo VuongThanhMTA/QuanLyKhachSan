@@ -19,6 +19,10 @@ namespace QuanLyKhachSan.BUS
         {
             return phieudal.XemPhieuDK(str);
         }
+        public DataTable XemThongTinKhachHangDangKyPhong(string id)
+        {
+            return phieudal.XemThongTinKhachHangDangKyPhong(id);
+        }
         public int ThemPhieuDangKy(PhieuDangKy phieudk)
         {
             return phieudal.ThemPhieuDangKy(phieudk);
