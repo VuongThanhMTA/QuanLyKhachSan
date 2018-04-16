@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyKhachSan.Entity;
+using QuanLyKhachSan.DAL;
 using System.Data;
 using System.Data.SqlClient;
-using QuanLyKhachSan.DAL;
-using QuanLyKhachSan.Entity;
+
 namespace QuanLyKhachSan.BUS
 {
-    public class HoaDonBUS
+   public class LoaiPhongBUS
     {
-        HoaDonDAL dal = new HoaDonDAL();
+        LoaiPhongDAL dal = new LoaiPhongDAL();
 
         public DataTable GetData()
         {
             return dal.GetData();
         }
 
-        public int InsertData(HoaDonEntity hd)
+        public int InsertData(LoaiPhongEntity lp)
         {
-            return dal.InsertData(hd);
+            return dal.InsertData(lp);
         }
 
-        public int EditData(HoaDonEntity hd)
+        public int EditData(LoaiPhongEntity hd)
         {
             return dal.EditData(hd);
         }
@@ -35,7 +36,6 @@ namespace QuanLyKhachSan.BUS
         public string TangMa()
         {
             return dal.TangMa();
-
         }
     }
- }
+}

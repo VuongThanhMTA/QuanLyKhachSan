@@ -65,3 +65,8 @@ C:\Users\ADMIN\Desktop\quanlyks\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj
 C:\Users\ADMIN\Desktop\quanlyks\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
 C:\Users\ADMIN\Desktop\quanlyks\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
 C:\Users\ADMIN\Desktop\quanlyks\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmKhachHang.resources
+G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmNhanVien.resources
+G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhieuDangKy.resources
+G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmXemThngTinKhachHang.resources
+G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhong.resources

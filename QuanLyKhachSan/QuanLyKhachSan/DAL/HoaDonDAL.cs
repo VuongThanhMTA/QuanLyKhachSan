@@ -56,5 +56,9 @@ namespace QuanLyKhachSan.DAL
              };
             return _connect.ExcuteSQL("SP_XoaHoaDon ", para);
         }
+        public string TangMa()
+        {
+            return _connect.TangMa("Select * From HoaDon", "HD");
+        }
     }
 }

@@ -4,26 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
 using QuanLyKhachSan.DAL;
 using QuanLyKhachSan.Entity;
+
 namespace QuanLyKhachSan.BUS
 {
-    public class HoaDonBUS
+    public class PhongBUS
     {
-        HoaDonDAL dal = new HoaDonDAL();
+        PhongDAL dal = new PhongDAL();
 
         public DataTable GetData()
         {
             return dal.GetData();
         }
 
-        public int InsertData(HoaDonEntity hd)
+        public int InsertData(PhongEntity lp)
         {
-            return dal.InsertData(hd);
+            return dal.InsertData(lp);
         }
 
-        public int EditData(HoaDonEntity hd)
+        public int EditData(PhongEntity hd)
         {
             return dal.EditData(hd);
         }
@@ -35,7 +35,11 @@ namespace QuanLyKhachSan.BUS
         public string TangMa()
         {
             return dal.TangMa();
+        }
 
+        public bool PhongDangSuDung(string Ma)
+        {
+            return dal.KiemTraTonTai(Ma);
         }
     }
- }
+}

@@ -18,14 +18,14 @@ namespace QuanLyKhachSan.View
         {
             InitializeComponent();
         }
-        HoaDonBUS hoaDonBUS = new HoaDonBUS();
-        HoaDonEntity hoaDonEntity = new HoaDonEntity();
+        HoaDonBUS busHoaDon = new HoaDonBUS();
+        HoaDonEntity EntityHoaDon = new HoaDonEntity();
+        PhieuDangKyBUS busPDK = new PhieuDangKyBUS();
+        NhanVienBus busNhanVien = new NhanVienBus();
         private int _click = 1;
         public void ClearTxt()
         {
             txtMaHD.Text = "";
-            txtMaNV.Text = "";
-            txtMaPhieuDK.Text = "";
             txtTongTien.Text = "";
             dtpNgayTT.Text = DateTime.Today.ToString();
         }
@@ -41,7 +41,11 @@ namespace QuanLyKhachSan.View
         }
         public void HienThi()
         {
-            dgvHoaDon.DataSource = hoaDonBUS.GetData();
+            dgvHoaDon.DataSource = busHoaDon.GetData();
+            cbMaPDK.DataSource = busPDK.XemPhieuDangKy();
+            cbMaPDK.DisplayMember = "MaPhieuDK";
+            cbMaNV.DataSource = busNhanVien.GetData();
+            cbMaNV.DisplayMember = "MaNV";
         }
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
@@ -59,40 +63,44 @@ namespace QuanLyKhachSan.View
             if (_click == 0)
             {
                 //txtMaHD.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaHD"].Value);
-                txtMaPhieuDK.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaPhieuDk"].Value);
-                txtMaNV.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaNV"].Value);
+                cbMaPDK.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaPhieuDk"].Value);
+                cbMaNV.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaNV"].Value);
                 txtTongTien.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["TongTien"].Value);
                 dtpNgayTT.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["NgayThanhToan"].Value);
             }
             else
             {
                 txtMaHD.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaHD"].Value);
-                txtMaPhieuDK.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaPhieuDk"].Value);
-                txtMaNV.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaNV"].Value);
+                cbMaPDK.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaPhieuDk"].Value);
+                cbMaNV.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["MaNV"].Value);
                 txtTongTien.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["TongTien"].Value);
                 dtpNgayTT.Text = Convert.ToString(dgvHoaDon.CurrentRow.Cells["NgayThanhToan"].Value);
             }
          }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             _click = 0;
+            ClearTxt();
+            txtMaHD.Text = busHoaDon.TangMa();
             KhoaBtn(true);
+            txtMaHD.Enabled = false;
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
             _click = 1;
             KhoaBtn(true);
+            txtMaHD.Enabled = false;
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
-                    hoaDonBUS.DeleteData(txtMaHD.Text);
+                    busHoaDon.DeleteData(txtMaHD.Text);
                     MessageBox.Show("Xóa thành công!");
                     ClearTxt();
                     KhoaBtn(false);
@@ -105,12 +113,13 @@ namespace QuanLyKhachSan.View
             }
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btnHuy_Click_1(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 HienThi();
+                ClearTxt();
                 KhoaBtn(false);
                 _click = 1;
             }
@@ -118,7 +127,7 @@ namespace QuanLyKhachSan.View
                 return;
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void btnThoat_Click_1(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
@@ -129,24 +138,20 @@ namespace QuanLyKhachSan.View
                 HienThi();
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            hoaDonEntity.MaHD = txtMaHD.Text;
-            hoaDonEntity.MaNV = txtMaNV.Text;
-            hoaDonEntity.MaPhieuDK = txtMaPhieuDK.Text;
-            hoaDonEntity.NgayThanhToan = dtpNgayTT.Text;
-            hoaDonEntity.TongTien = txtTongTien.Text;
+            EntityHoaDon.MaHD = txtMaHD.Text;
+            EntityHoaDon.MaNV = cbMaNV.Text;
+            EntityHoaDon.MaPhieuDK = cbMaPDK.Text;
+            EntityHoaDon.NgayThanhToan = dtpNgayTT.Text;
+            EntityHoaDon.TongTien = txtTongTien.Text;
 
             if (_click == 0)
             {
                 try
                 {
-                    hoaDonBUS.InsertData(hoaDonEntity);
+                    busHoaDon.InsertData(EntityHoaDon);
                     MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    ClearTxt();
-                    KhoaBtn(false);
-                    _click = 1;
                 }
                 catch (Exception ex)
                 {
@@ -157,18 +162,20 @@ namespace QuanLyKhachSan.View
             {
                 try
                 {
-                    hoaDonBUS.EditData(hoaDonEntity);
+                    busHoaDon.EditData(EntityHoaDon);
                     MessageBox.Show("Sửa thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    ClearTxt();
-                    KhoaBtn(false);
-                    _click = 1;
+                  
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi "+ex);
                 }
             }
+            HienThi();
+            ClearTxt();
+            KhoaBtn(false);
+            _click = 1;
         }
+   
     }
 }

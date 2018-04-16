@@ -191,6 +191,7 @@ namespace QuanLyKhachSan.View
 
         private void dgvPhieuDK_DoubleClick(object sender, EventArgs e)
         {
+            MaKH1 = cmbMaKH.Text ;
             frmXemThngTinKhachHang xem = new frmXemThngTinKhachHang();
             xem.Show();
         }

@@ -13,7 +13,7 @@ namespace QuanLyKhachSan.DAL
         private SqlConnection _connect;
         public KetNoi()
         {
-            _connect = new SqlConnection(@"Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+            _connect = new SqlConnection(@"Data Source=THANHVUONG\SQLEXPRESS88;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
         }
         public DataTable GetData(string strSql)
         {
@@ -101,6 +101,29 @@ namespace QuanLyKhachSan.DAL
             int count = cmd.ExecuteNonQuery();
             _connect.Close();
             return count;
+        }
+
+        public bool KiemTraTonTai(string querySQL, string Ma)
+        {
+            bool b = false;
+            SqlCommand cmd = new SqlCommand(querySQL, _connect);
+            _connect.Open();
+            SqlDataReader adt = cmd.ExecuteReader();
+            while (adt.Read())
+            {
+                if (Ma == adt[0].ToString())
+                {
+                    b = true;
+                    break;
+                }
+                else
+                {
+                    b = false;
+                    break;
+                }
+            }
+            _connect.Close();
+            return b;
         }
     }
 }
