@@ -62,7 +62,7 @@ namespace QuanLyKhachSan.DAL
         }
         public string TangMa()
         {
-            return kn.TangMa("Select * From PhieuDangKy", "PDK");
+            return kn.TangMa("Select * From PhieuDangKy", "DK");
         }
     }
 }
