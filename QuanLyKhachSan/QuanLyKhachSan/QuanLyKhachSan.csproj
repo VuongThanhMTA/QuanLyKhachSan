@@ -52,6 +52,7 @@
     <Compile Include="BUS\LoaiPhongBUS.cs" />
     <Compile Include="BUS\NhanVienBus.cs" />
     <Compile Include="BUS\PhieuDangKyBUS.cs" />
+    <Compile Include="BUS\PhieuDichVuBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="DAL\DichVuDAL.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="DAL\LoaiPhongDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhieuDangKyDAL.cs" />
+    <Compile Include="DAL\PhieuDichVuDAL.cs" />
     <Compile Include="DAL\PhongDAL.cs" />
     <Compile Include="Entity\DichVuEntity.cs" />
     <Compile Include="Entity\HoaDonEntity.cs" />
@@ -101,6 +103,12 @@
     <Compile Include="View\frmPhieuDangKy.designer.cs">
       <DependentUpon>frmPhieuDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPhieuDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPhieuDichVu.Designer.cs">
+      <DependentUpon>frmPhieuDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPhieuDangKy.resx">
       <DependentUpon>frmPhieuDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPhieuDichVu.resx">
+      <DependentUpon>frmPhieuDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>

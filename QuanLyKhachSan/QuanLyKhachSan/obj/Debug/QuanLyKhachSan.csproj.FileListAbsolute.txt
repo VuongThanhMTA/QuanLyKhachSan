@@ -83,3 +83,4 @@ C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\o
 C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhong.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmXemThngTinKhachHang.resources
 C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhieuDichVu.resources

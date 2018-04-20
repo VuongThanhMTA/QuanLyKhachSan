@@ -201,5 +201,11 @@ namespace QuanLyKhachSan.View
             frmXemThngTinKhachHang xem = new frmXemThngTinKhachHang();
             xem.Show();
         }
+
+        private void btnDkyDV_Click(object sender, EventArgs e)
+        {
+            frmPhieuDichVu PDV = new frmPhieuDichVu(txtMaPhieuDk.Text);
+            PDV.ShowDialog();
+        }
     }
 }
