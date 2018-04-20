@@ -33,6 +33,7 @@ BEGIN
 DELETE dbo.NhanVien WHERE MaNV = @Ma
 END
 
+go
 CREATE PROC NhanVien_SelectAll
 AS
 BEGIN

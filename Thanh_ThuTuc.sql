@@ -24,7 +24,7 @@ BEGIN
 END 
 
 GO
-ALTER PROC SP_SuaLoaiPhong @MaLoaiPhong VARCHAR(5), @TenLP NVARCHAR(50)
+CREATE PROC SP_SuaLoaiPhong @MaLoaiPhong VARCHAR(5), @TenLP NVARCHAR(50)
 AS
 BEGIN 
 		UPDATE dbo.LoaiPhong SET LoaiPhong = @TenLP
@@ -48,7 +48,7 @@ BEGIN
 END 
 
 GO 
-ALTER PROC SP_ThemHoaDon (@MaHD VARCHAR(5), @MaNV VARCHAR(5),@MaPhieuDK VARCHAR(5), @NgayThanhToan DATE,@TongTien INT)
+CREATE PROC SP_ThemHoaDon (@MaHD VARCHAR(5), @MaNV VARCHAR(5),@MaPhieuDK VARCHAR(5), @NgayThanhToan DATE,@TongTien INT)
 AS
 BEGIN
 	INSERT dbo.HoaDon( MaHD , MaPhieuDK ,MaNV ,NgayThanhToan ,TongTien)

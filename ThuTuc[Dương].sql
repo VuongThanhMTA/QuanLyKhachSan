@@ -37,7 +37,7 @@ BEGIN
 END
 GO
 --thu tuc XemThongTinKhachHangDangKyPhong
-ALTER PROC XemThongTinKhachHangDangKyPhong(@MaKH VARCHAR(10))
+CREATE PROC XemThongTinKhachHangDangKyPhong(@MaKH VARCHAR(10))
 AS 
 BEGIN
 	SELECT TenKH,TenPhong,LoaiPhong,SDT,CMND FROM dbo.KhachHang JOIN dbo.PhieuDangKy

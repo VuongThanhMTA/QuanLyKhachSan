@@ -51,3 +51,37 @@ BEGIN
 	DELETE dbo.DichVu
 	WHERE MaDV=@MaDV
 END
+------ Phiếu dịch vụ
+-- Xem PDV
+GO
+CREATE PROC XemPDV
+AS
+BEGIN
+	SELECT MaPhieuDK,TenDV,SoLuong, ThanhTien=(Gia*SoLuong) FROM dbo.PhieuDichVu INNER JOIN dbo.DichVu ON DichVu.MaDV = PhieuDichVu.MaDV
+END
+-- Thêm DV
+GO
+CREATE PROC ThemPDV(@MaPhieuDK VARCHAR(10), @MaDV VARCHAR(10), @SoLuong INT)
+AS
+BEGIN
+	INSERT INTO dbo.PhieuDichVu
+	        ( MaPhieuDK, MaDV, SoLuong )
+	VALUES  (  @MaPhieuDK,@MaDV,@SoLuong )
+END
+-- Sửa PDV
+GO
+CREATE PROC SuaPDV(@MaPhieuDK VARCHAR(10), @MaDV VARCHAR(10), @SoLuong INT)
+AS
+BEGIN
+	UPDATE dbo.PhieuDichVu
+	SET MaDV=@MaDV,SoLuong=@SoLuong
+	WHERE MaPhieuDK=@MaPhieuDK
+END
+-- Xóa PDV
+GO
+CREATE PROC XoaPDV(@MaPhieuDK VARCHAR(10), @MaDV VARCHAR(10))
+AS
+BEGIN
+	DELETE dbo.PhieuDichVu
+	WHERE MaPhieuDK=@MaPhieuDK AND MaDV=@MaDV
+END

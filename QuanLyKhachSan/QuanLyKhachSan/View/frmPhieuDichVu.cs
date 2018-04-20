@@ -26,6 +26,15 @@ namespace QuanLyKhachSan.View
         {
             ma = text;
         }
+        public void ShowDV()
+        {
+            DataTable dt = new DataTable();
+            dt = Bus.GetListDV();
+            cbDV.DataSource = dt;
+            cbDV.DisplayMember = "TenDV";
+            cbDV.ValueMember = "MaDV";
+
+        }
         private void DisEnl(bool e)
         {
             btnThem.Enabled = !e;
@@ -49,6 +58,7 @@ namespace QuanLyKhachSan.View
             txtMaPDK.Text = ma;
             dgvPDV.DataSource = Bus.GetData();
             txtMaPDK.Enabled = false;
+            ShowDV();
         }
 
         private void btnThemCT_Click(object sender, EventArgs e)

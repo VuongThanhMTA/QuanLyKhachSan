@@ -32,6 +32,7 @@ namespace QuanLyKhachSan.View
             dateNgayLap.Enabled = e;
             txtTienCoc.Enabled = e;
         }
+
         private void clearData()
         {
             txtMaPhieuDk.Text = "";
