@@ -12,9 +12,9 @@ namespace QuanLyKhachSan.BUS
     public class PhieuDichVuBUS
     {
         PhieuDichVuDAL da = new PhieuDichVuDAL();
-        public DataTable GetData()
+        public DataTable GetData(string str)
         {
-            return da.GetData();
+            return da.GetDataStr(str);
         }
         public int InsertData(PhieuDichVuEntity PDV)
         {

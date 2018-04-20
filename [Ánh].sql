@@ -85,3 +85,15 @@ BEGIN
 	DELETE dbo.PhieuDichVu
 	WHERE MaPhieuDK=@MaPhieuDK AND MaDV=@MaDV
 END
+
+EXEC dbo.ThemPDV @MaPhieuDK = 'DK01', -- varchar(10)
+    @MaDV = 'DV01', -- varchar(10)
+    @SoLuong = 2 -- int
+
+----
+	SELECT MaPhieuDK,TenDV,SoLuong, ThanhTien=(Gia*SoLuong) FROM dbo.PhieuDichVu INNER JOIN dbo.DichVu ON DichVu.MaDV = PhieuDichVu.MaDV WHERE MaPhieuDK
+
+	EXEC dbo.SuaPDV @MaPhieuDK = 'DK01', -- varchar(10)
+	    @MaDV = 'DV03', -- varchar(10)
+	    @SoLuong = 2 -- int
+	

@@ -56,7 +56,7 @@ namespace QuanLyKhachSan.View
         private void HienThi()
         {
             txtMaPDK.Text = ma;
-            dgvPDV.DataSource = Bus.GetData();
+            dgvPDV.DataSource = Bus.GetData("SELECT MaPhieuDK,TenDV,SoLuong, ThanhTien=(Gia*SoLuong) FROM dbo.PhieuDichVu INNER JOIN dbo.DichVu ON DichVu.MaDV = PhieuDichVu.MaDV WHERE MaPhieuDK LIKE '"+txtMaPDK.Text.Trim()+"'");
             txtMaPDK.Enabled = false;
             ShowDV();
         }
@@ -81,7 +81,7 @@ namespace QuanLyKhachSan.View
             {
                 try
                 {
-                    Bus.DeleteData(txtMaPDK.Text,cbDV.ValueMember.ToString());
+                    Bus.DeleteData(txtMaPDK.Text,cbDV.SelectedValue.ToString());
                     MessageBox.Show("Xóa thành công!");
                     clearData();
                     DisEnl(false);

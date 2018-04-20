@@ -12,9 +12,9 @@ namespace QuanLyKhachSan.DAL
     public class PhieuDichVuDAL
     {
         KetNoi conn = new KetNoi();
-        public DataTable GetData()
+        public DataTable GetDataStr(string str)
         {
-            return conn.GetData("XemPDV", null);
+            return conn.GetData(str);
         }
         public int InsertData(PhieuDichVuEntity PDV)
         {
