@@ -22,7 +22,7 @@ namespace QuanLyKhachSan.DAL
             {
                 new SqlParameter("MaPhieuDK",PDV.MaPhieuDK),
                 new SqlParameter("MaDV",PDV.MaDV),
-                new SqlParameter("Gia",PDV.SoLuong)
+                new SqlParameter("SoLuong",PDV.SoLuong)
 
             };
             return conn.ExcuteSQL("ThemPDV", para);
@@ -33,7 +33,7 @@ namespace QuanLyKhachSan.DAL
             {
                 new SqlParameter("MaPhieuDK",PDV.MaPhieuDK),
                 new SqlParameter("MaDV",PDV.MaDV),
-                new SqlParameter("Gia",PDV.SoLuong)
+                new SqlParameter("SoLuong",PDV.SoLuong)
 
             };
             return conn.ExcuteSQL("SuaPDV", para);

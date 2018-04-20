@@ -81,7 +81,7 @@ namespace QuanLyKhachSan.View
             {
                 try
                 {
-                    Bus.DeleteData(txtMaPDK.Text,cbDV.ValueMember);
+                    Bus.DeleteData(txtMaPDK.Text,cbDV.ValueMember.ToString());
                     MessageBox.Show("Xóa thành công!");
                     clearData();
                     DisEnl(false);
@@ -112,7 +112,7 @@ namespace QuanLyKhachSan.View
             int _soLuong;
             int.TryParse(txtSoLuong.Text, out _soLuong);
 
-            obj.TenDV = cbDV.SelectedValue.ToString();
+            obj.MaDV = cbDV.SelectedValue.ToString();
             obj.MaPhieuDK = txtMaPDK.Text;
             obj.SoLuong = _soLuong;
 
