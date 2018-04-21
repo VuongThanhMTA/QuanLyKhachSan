@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuDichVu));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dgvPDV = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.THANHTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHuy = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.cbDV = new System.Windows.Forms.ComboBox();
@@ -43,14 +48,9 @@
             this.btnLamTrong = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.THANHTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSua = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPDV)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -86,9 +86,41 @@
             this.dgvPDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPDV_CellClick);
             this.dgvPDV.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvPDV_RowPrePaint);
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 50;
+            // 
+            // MaPhieuDK
+            // 
+            this.MaPhieuDK.DataPropertyName = "MaPhieuDK";
+            this.MaPhieuDK.HeaderText = "Mã Phiếu ĐK";
+            this.MaPhieuDK.Name = "MaPhieuDK";
+            // 
+            // TenDV
+            // 
+            this.TenDV.DataPropertyName = "TenDV";
+            this.TenDV.HeaderText = "Dịch Vụ";
+            this.TenDV.Name = "TenDV";
+            this.TenDV.Width = 90;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 70;
+            // 
+            // THANHTIEN
+            // 
+            this.THANHTIEN.DataPropertyName = "ThanhTien";
+            this.THANHTIEN.HeaderText = "Thành Tiền";
+            this.THANHTIEN.Name = "THANHTIEN";
+            // 
             // btnHuy
             // 
-            this.btnHuy.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHuy.BackColor = System.Drawing.Color.SteelBlue;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnHuy.Location = new System.Drawing.Point(66, 76);
@@ -181,7 +213,7 @@
             // 
             // btnLamTrong
             // 
-            this.btnLamTrong.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLamTrong.BackColor = System.Drawing.Color.SteelBlue;
             this.btnLamTrong.Image = ((System.Drawing.Image)(resources.GetObject("btnLamTrong.Image")));
             this.btnLamTrong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLamTrong.Location = new System.Drawing.Point(123, 76);
@@ -195,7 +227,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLuu.BackColor = System.Drawing.Color.SteelBlue;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLuu.Location = new System.Drawing.Point(9, 76);
@@ -209,7 +241,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnXoa.BackColor = System.Drawing.Color.SteelBlue;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnXoa.Location = new System.Drawing.Point(123, 17);
@@ -221,23 +253,9 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoaCT_Click);
             // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(66, 17);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(51, 53);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSuaCT_Click);
-            // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThem.BackColor = System.Drawing.Color.SteelBlue;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThem.Location = new System.Drawing.Point(9, 17);
@@ -251,7 +269,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThoat.BackColor = System.Drawing.Color.SteelBlue;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThoat.Location = new System.Drawing.Point(485, 24);
@@ -263,42 +281,25 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // STT
+            // btnSua
             // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 50;
-            // 
-            // MaPhieuDK
-            // 
-            this.MaPhieuDK.DataPropertyName = "MaPhieuDK";
-            this.MaPhieuDK.HeaderText = "Mã Phiếu ĐK";
-            this.MaPhieuDK.Name = "MaPhieuDK";
-            // 
-            // TenDV
-            // 
-            this.TenDV.DataPropertyName = "TenDV";
-            this.TenDV.HeaderText = "Dịch Vụ";
-            this.TenDV.Name = "TenDV";
-            this.TenDV.Width = 90;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 70;
-            // 
-            // THANHTIEN
-            // 
-            this.THANHTIEN.DataPropertyName = "ThanhTien";
-            this.THANHTIEN.HeaderText = "Thành Tiền";
-            this.THANHTIEN.Name = "THANHTIEN";
+            this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSua.Location = new System.Drawing.Point(66, 17);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(51, 53);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSuaCT_Click);
             // 
             // frmPhieuDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(551, 449);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupBox7);
@@ -330,7 +331,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamTrong;
         private System.Windows.Forms.Button btnThoat;
@@ -339,5 +339,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN;
+        private System.Windows.Forms.Button btnSua;
     }
 }

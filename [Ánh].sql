@@ -74,8 +74,8 @@ ALTER PROC SuaPDV(@MaPhieuDK VARCHAR(10), @MaDV VARCHAR(10), @SoLuong INT)
 AS
 BEGIN
 	UPDATE dbo.PhieuDichVu
-	SET MaDV=@MaDV,SoLuong=@SoLuong
-	WHERE MaPhieuDK=@MaPhieuDK
+	SET SoLuong=@SoLuong
+	WHERE MaPhieuDK=@MaPhieuDK AND MaDV=@MaDV
 END
 -- Xóa PDV
 GO
