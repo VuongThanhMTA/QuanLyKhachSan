@@ -70,7 +70,7 @@ BEGIN
 END
 -- Sửa PDV
 GO
-CREATE PROC SuaPDV(@MaPhieuDK VARCHAR(10), @MaDV VARCHAR(10), @SoLuong INT)
+ALTER PROC SuaPDV(@MaPhieuDK VARCHAR(10), @MaDV VARCHAR(10), @SoLuong INT)
 AS
 BEGIN
 	UPDATE dbo.PhieuDichVu
@@ -94,6 +94,6 @@ EXEC dbo.ThemPDV @MaPhieuDK = 'DK01', -- varchar(10)
 	SELECT MaPhieuDK,TenDV,SoLuong, ThanhTien=(Gia*SoLuong) FROM dbo.PhieuDichVu INNER JOIN dbo.DichVu ON DichVu.MaDV = PhieuDichVu.MaDV WHERE MaPhieuDK
 
 	EXEC dbo.SuaPDV @MaPhieuDK = 'DK01', -- varchar(10)
-	    @MaDV = 'DV03', -- varchar(10)
+	    @MaDV = 'DV02', -- varchar(10)
 	    @SoLuong = 2 -- int
 	
