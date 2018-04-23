@@ -44,7 +44,11 @@ namespace QuanLyKhachSan.View
         public void KhoaBtn_Phong(bool key)
         {
             
-            txtMaPhongP.Enabled = !key;
+            txtMaPhongP.Enabled = key;
+            txtMaLoaiPhongLP.Enabled = key;
+            txtTenPhong.Enabled = key;
+            txtTrangThai.Enabled = key;
+            cbMaLoaiPhong.Enabled = key;
 
             btnThemP.Enabled = !key;
             btnSuaP.Enabled = !key;
@@ -56,7 +60,8 @@ namespace QuanLyKhachSan.View
 
         public void KhoaBtn_LoaiPhong(bool key)
         {
-            txtMaLoaiPhongLP.Enabled = !key;
+            txtMaLoaiPhongLP.Enabled = key;
+            txtLoaiPhong.Enabled = key;
 
             btnThemLP.Enabled = !key;
             btnSuaLP.Enabled = !key;
@@ -75,12 +80,14 @@ namespace QuanLyKhachSan.View
         {
             dgvLoaiPhong.DataSource = loaiPhongBUS.GetData();
             dgvPhong.DataSource = phongBUS.GetData();
-            HienThiMaLoaiPhong();
+            
 
         }
 
         private void frmPhong_Load_1(object sender, EventArgs e)
         {
+            KhoaBtn_LoaiPhong(false);
+            KhoaBtn_Phong(false);
             HienThi();
         }
 
@@ -88,6 +95,7 @@ namespace QuanLyKhachSan.View
         //PHONG
         private void btnThemP_Click(object sender, EventArgs e)
         {
+            HienThiMaLoaiPhong();
             _clickBtnPhong = 0;
             KhoaBtn_Phong(true);
             txtMaPhongP.Text = phongBUS.TangMa();
@@ -96,6 +104,7 @@ namespace QuanLyKhachSan.View
 
         private void btnSuaP_Click(object sender, EventArgs e)
         {
+            HienThiMaLoaiPhong();
             _clickBtnPhong = 1;
             KhoaBtn_Phong(true);   
             txtMaPhongP.Enabled = false;

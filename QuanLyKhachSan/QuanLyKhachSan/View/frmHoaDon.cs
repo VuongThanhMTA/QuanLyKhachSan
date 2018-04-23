@@ -28,6 +28,8 @@ namespace QuanLyKhachSan.View
             txtMaHD.Text = "";
             txtTongTien.Text = "";
             dtpNgayTT.Text = DateTime.Today.ToString();
+            cbMaNV.Text = "";
+            cbMaPDK.Text = "";
         }
 
         public void KhoaBtn( bool key)
@@ -38,10 +40,20 @@ namespace QuanLyKhachSan.View
             btnLuu.Enabled = key;
             btnHuy.Enabled = key;
             btnThoat.Enabled = !key;
+
+            txtMaHD.Enabled = key;
+            txtTongTien.Enabled = key;
+            cbMaNV.Enabled =key;
+            cbMaPDK.Enabled = key;
+            dtpNgayTT.Enabled = key;
         }
-        public void HienThi()
+        public void HienThiDSHD()
         {
             dgvHoaDon.DataSource = busHoaDon.GetData();
+        }
+
+        public void HienThiMaLen_Cb()
+        {        
             cbMaPDK.DataSource = busPDK.XemPhieuDangKy();
             cbMaPDK.DisplayMember = "MaPhieuDK";
             cbMaNV.DataSource = busNhanVien.GetData();
@@ -49,7 +61,7 @@ namespace QuanLyKhachSan.View
         }
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
-            HienThi();
+            HienThiDSHD();
             KhoaBtn(false);
         }     
 
@@ -80,6 +92,7 @@ namespace QuanLyKhachSan.View
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
+            HienThiMaLen_Cb();
             _click = 0;
             ClearTxt();
             txtMaHD.Text = busHoaDon.TangMa();
@@ -89,6 +102,7 @@ namespace QuanLyKhachSan.View
 
         private void btnSua_Click_1(object sender, EventArgs e)
         {
+            HienThiMaLen_Cb();
             _click = 1;
             KhoaBtn(true);
             txtMaHD.Enabled = false;
@@ -104,7 +118,7 @@ namespace QuanLyKhachSan.View
                     MessageBox.Show("Xóa thành công!");
                     ClearTxt();
                     KhoaBtn(false);
-                    HienThi();
+                    HienThiDSHD();
                 }
                 catch (Exception ex)
                 {
@@ -118,7 +132,7 @@ namespace QuanLyKhachSan.View
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                HienThi();
+                HienThiDSHD();
                 ClearTxt();
                 KhoaBtn(false);
                 _click = 1;
@@ -135,7 +149,7 @@ namespace QuanLyKhachSan.View
                 this.Close();
             }
             else
-                HienThi();
+                HienThiDSHD();
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)
@@ -171,7 +185,7 @@ namespace QuanLyKhachSan.View
                     MessageBox.Show("Lỗi "+ex);
                 }
             }
-            HienThi();
+            HienThiDSHD();
             ClearTxt();
             KhoaBtn(false);
             _click = 1;

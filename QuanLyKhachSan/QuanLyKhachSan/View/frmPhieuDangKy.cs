@@ -67,6 +67,7 @@ namespace QuanLyKhachSan.View
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
+                clearData();
                 HienThi();
                 DisEnl(false);
                 fluu = 1;
@@ -77,6 +78,7 @@ namespace QuanLyKhachSan.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            HienThi_MaLen_CB();
             fluu = 0;
             txtMaPhieuDk.Text = phieudkbus.TangMa();
             DisEnl(true);
@@ -85,6 +87,7 @@ namespace QuanLyKhachSan.View
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            HienThi_MaLen_CB();
             fluu = 1;
             DisEnl(true);
             txtMaPhieuDk.Enabled = false;
@@ -105,7 +108,7 @@ namespace QuanLyKhachSan.View
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi \n " + ex);
                 }
             }
         }
@@ -145,9 +148,9 @@ namespace QuanLyKhachSan.View
                     clearData();
                     DisEnl(false);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi");
+                    MessageBox.Show("Lỗi \n " +ex);
                 }
             }
         }
@@ -182,6 +185,11 @@ namespace QuanLyKhachSan.View
         {
             HienThi();
             DisEnl(false);
+            
+        }
+
+        private void HienThi_MaLen_CB()
+        {
             cmbMaNV.DataSource = phieudkbus.XemPhieuDK("select * from NhanVien");
             cmbMaNV.DisplayMember = "MaNV";
             cmbMaKH.DataSource = phieudkbus.XemPhieuDK("select * from KhachHang");
@@ -189,7 +197,6 @@ namespace QuanLyKhachSan.View
             cmbMaPhong.DataSource = phieudkbus.XemPhieuDK("select * from Phong");
             cmbMaPhong.DisplayMember = "MaPhong";
         }
-
         private void dgvPhieuDK_DoubleClick(object sender, EventArgs e)
         {
             MaKH1 = cmbMaKH.Text ;
@@ -199,14 +206,30 @@ namespace QuanLyKhachSan.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmXemThngTinKhachHang xem = new frmXemThngTinKhachHang();
-            xem.Show();
+            if (txtMaPhieuDk.Text == "")
+            {
+                MessageBox.Show("Chọn phiếu !");
+            }
+            else
+            {
+                MaKH1 = cmbMaKH.Text;
+                frmXemThngTinKhachHang xem = new frmXemThngTinKhachHang();
+                xem.Show();
+            }
         }
 
         private void btnDkyDV_Click(object sender, EventArgs e)
         {
-            frmPhieuDichVu PDV = new frmPhieuDichVu(txtMaPhieuDk.Text);
-            PDV.ShowDialog();
+            if (txtMaPhieuDk.Text == "")
+            {
+                MessageBox.Show("Chọn phiếu !");
+            }
+            else
+            {
+                frmPhieuDichVu PDV = new frmPhieuDichVu(txtMaPhieuDk.Text);
+                PDV.ShowDialog();
+            }
+
         }
     }
 }

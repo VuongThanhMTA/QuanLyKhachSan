@@ -54,7 +54,7 @@ namespace QuanLyKhachSan.DAL
         {
             SqlParameter[] para =
             {
-                new SqlParameter("MaNV",ID)
+                new SqlParameter("Ma",ID)
             };
             return conn.ExcuteSQL("XoaNhanVien", para);
         }

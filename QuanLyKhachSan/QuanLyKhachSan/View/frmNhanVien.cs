@@ -109,9 +109,9 @@ namespace QuanLyKhachSan.View
                     DisEnl(false);
                     HienThi();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi không xóa được");
+                    MessageBox.Show("Lỗi không xóa được \n" +ex);
                 }
             }
         }
