@@ -124,7 +124,7 @@ namespace QuanLyKhachSan.View
                 {
                     Bus.InsertData(obj);
                     MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
+                    //HienThi();
                     frmPhieuDichVu_Load(sender, e);
                     clearData();
                     DisEnl(false);
