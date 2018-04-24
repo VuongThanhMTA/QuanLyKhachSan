@@ -73,6 +73,7 @@ namespace QuanLyKhachSan.View
             fluu = 1;
             DisEnl(true);
             txtMaPDK.Enabled = false;
+            cbDV.Enabled = false;
         }
 
         private void btnXoaCT_Click(object sender, EventArgs e)
