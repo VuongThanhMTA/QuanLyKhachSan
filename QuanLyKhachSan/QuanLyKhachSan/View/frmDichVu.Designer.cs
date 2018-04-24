@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDichVu));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvDichVu = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -52,16 +57,11 @@
             this.txtGia = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvDichVu = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -73,6 +73,45 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Dịch Vụ";
+            // 
+            // dgvDichVu
+            // 
+            this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDichVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MaDV,
+            this.TenDV,
+            this.Gia});
+            this.dgvDichVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDichVu.Location = new System.Drawing.Point(3, 16);
+            this.dgvDichVu.Name = "dgvDichVu";
+            this.dgvDichVu.Size = new System.Drawing.Size(443, 404);
+            this.dgvDichVu.TabIndex = 0;
+            this.dgvDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellClick);
+            this.dgvDichVu.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvDichVu_RowPrePaint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaDV
+            // 
+            this.MaDV.DataPropertyName = "MaDV";
+            this.MaDV.HeaderText = "Mã DV";
+            this.MaDV.Name = "MaDV";
+            // 
+            // TenDV
+            // 
+            this.TenDV.DataPropertyName = "TenDV";
+            this.TenDV.HeaderText = "Tên DV";
+            this.TenDV.Name = "TenDV";
+            // 
+            // Gia
+            // 
+            this.Gia.DataPropertyName = "Gia";
+            this.Gia.HeaderText = "Giá";
+            this.Gia.Name = "Gia";
             // 
             // btnThem
             // 
@@ -317,56 +356,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Quản Lý Dịch Vụ";
             // 
-            // dgvDichVu
-            // 
-            this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.MaDV,
-            this.TenDV,
-            this.Gia});
-            this.dgvDichVu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDichVu.Location = new System.Drawing.Point(3, 16);
-            this.dgvDichVu.Name = "dgvDichVu";
-            this.dgvDichVu.Size = new System.Drawing.Size(443, 404);
-            this.dgvDichVu.TabIndex = 0;
-            this.dgvDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellClick);
-            this.dgvDichVu.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvDichVu_RowPrePaint);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaDV
-            // 
-            this.MaDV.DataPropertyName = "MaDV";
-            this.MaDV.HeaderText = "Mã DV";
-            this.MaDV.Name = "MaDV";
-            // 
-            // TenDV
-            // 
-            this.TenDV.DataPropertyName = "TenDV";
-            this.TenDV.HeaderText = "Tên DV";
-            this.TenDV.Name = "TenDV";
-            // 
-            // Gia
-            // 
-            this.Gia.DataPropertyName = "Gia";
-            this.Gia.HeaderText = "Giá";
-            this.Gia.Name = "Gia";
-            // 
             // frmDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(764, 480);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -377,12 +378,12 @@
             this.Text = "frmDichVu";
             this.Load += new System.EventHandler(this.frmDichVu_Load);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

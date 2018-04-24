@@ -48,9 +48,9 @@
             this.btnLamTrong = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPDV)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -253,6 +253,20 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoaCT_Click);
             // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSua.Location = new System.Drawing.Point(66, 17);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(51, 53);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSuaCT_Click);
+            // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.SteelBlue;
@@ -281,20 +295,6 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(66, 17);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(51, 53);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSuaCT_Click);
-            // 
             // frmPhieuDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +306,7 @@
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Name = "frmPhieuDichVu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmPhieuDichVu";
             this.Load += new System.EventHandler(this.frmPhieuDichVu_Load);
             this.groupBox7.ResumeLayout(false);

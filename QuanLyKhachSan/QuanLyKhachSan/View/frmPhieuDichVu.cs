@@ -177,7 +177,6 @@ namespace QuanLyKhachSan.View
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn thoát?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-
                 this.Close();
             }
             else

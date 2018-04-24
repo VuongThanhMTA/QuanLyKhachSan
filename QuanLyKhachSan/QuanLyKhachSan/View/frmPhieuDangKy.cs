@@ -226,8 +226,10 @@ namespace QuanLyKhachSan.View
             }
             else
             {
+                this.Hide();
                 frmPhieuDichVu PDV = new frmPhieuDichVu(txtMaPhieuDk.Text);
                 PDV.ShowDialog();
+                this.Show();
             }
 
         }
