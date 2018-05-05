@@ -96,4 +96,10 @@ EXEC dbo.ThemPDV @MaPhieuDK = 'DK01', -- varchar(10)
 	EXEC dbo.SuaPDV @MaPhieuDK = 'DK01', -- varchar(10)
 	    @MaDV = 'DV02', -- varchar(10)
 	    @SoLuong = 2 -- int
-	
+
+
+
+SELECT * 
+FROM dbo.DichVu
+WHERE TenDV NOT IN (SELECT TenDV FROM dbo.PhieuDichVu INNER JOIN dbo.DichVu ON DichVu.MaDV = PhieuDichVu.MaDV WHERE MaPhieuDK ='DK01')	
+

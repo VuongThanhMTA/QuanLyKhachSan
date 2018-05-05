@@ -106,3 +106,6 @@ H:\Users\MINH\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\
 H:\Users\MINH\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmDangNhap.resources
 H:\Users\MINH\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmhuongdan.resources
 H:\Users\MINH\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmMain.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmDangNhap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmhuongdan.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmMain.resources
