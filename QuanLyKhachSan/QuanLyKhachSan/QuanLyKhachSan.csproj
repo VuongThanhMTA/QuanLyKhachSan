@@ -50,6 +50,7 @@
     <Compile Include="BUS\HoaDonBUS.cs" />
     <Compile Include="BUS\KhachHangBUS.cs" />
     <Compile Include="BUS\LoaiPhongBUS.cs" />
+    <Compile Include="BUS\NguoiDungBUS.cs" />
     <Compile Include="BUS\NhanVienBus.cs" />
     <Compile Include="BUS\PhieuDangKyBUS.cs" />
     <Compile Include="BUS\PhieuDichVuBUS.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="DAL\KetNoi.cs" />
     <Compile Include="DAL\KhachHangDAL.cs" />
     <Compile Include="DAL\LoaiPhongDAL.cs" />
+    <Compile Include="DAL\NguoiDungDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhieuDangKyDAL.cs" />
     <Compile Include="DAL\PhieuDichVuDAL.cs" />
@@ -67,12 +69,19 @@
     <Compile Include="Entity\HoaDonEntity.cs" />
     <Compile Include="Entity\KhachHangEntity.cs" />
     <Compile Include="Entity\LoaiPhongEntity.cs" />
+    <Compile Include="Entity\NguoiDung.cs" />
     <Compile Include="Entity\NhanVienEntity.cs" />
     <Compile Include="Entity\PhieuDangKy.cs" />
     <Compile Include="Entity\PhieuDichVuEntity.cs" />
     <Compile Include="Entity\PhongEntity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDangNhap.designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +94,23 @@
     <Compile Include="View\frmHoaDon.designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmhuongdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmhuongdan.designer.cs">
+      <DependentUpon>frmhuongdan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmKhachHang.Designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmNhanVien.cs">
       <SubType>Form</SubType>
@@ -129,15 +150,25 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmDichVu.resx">
       <DependentUpon>frmDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmhuongdan.resx">
+      <DependentUpon>frmhuongdan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
@@ -167,7 +198,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="View\LogoHV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Untitled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

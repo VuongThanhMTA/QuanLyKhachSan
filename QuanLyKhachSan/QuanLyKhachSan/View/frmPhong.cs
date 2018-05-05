@@ -200,6 +200,8 @@ namespace QuanLyKhachSan.View
             DialogResult dr = MessageBox.Show("Bạn chắc chắn thoát", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
+                frmMain m = new frmMain();
+                m.Show();
                 this.Close();
             }
             else
@@ -334,6 +336,8 @@ namespace QuanLyKhachSan.View
             DialogResult dr = MessageBox.Show("Bạn chắc chắn thoát", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
+                frmMain m = new frmMain();
+                m.Show();
                 this.Close();
             }
             else

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuDangKy));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnDkyDV = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDkyDV = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuDK)).BeginInit();
@@ -84,6 +84,21 @@
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chức Năng";
+            // 
+            // btnDkyDV
+            // 
+            this.btnDkyDV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDkyDV.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDkyDV.Image = ((System.Drawing.Image)(resources.GetObject("btnDkyDV.Image")));
+            this.btnDkyDV.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDkyDV.Location = new System.Drawing.Point(443, 25);
+            this.btnDkyDV.Name = "btnDkyDV";
+            this.btnDkyDV.Size = new System.Drawing.Size(84, 75);
+            this.btnDkyDV.TabIndex = 12;
+            this.btnDkyDV.Text = "Đăng ký DV";
+            this.btnDkyDV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDkyDV.UseVisualStyleBackColor = true;
+            this.btnDkyDV.Click += new System.EventHandler(this.btnDkyDV_Click);
             // 
             // button1
             // 
@@ -405,21 +420,6 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "PHIẾU ĐĂNG KÝ";
             // 
-            // btnDkyDV
-            // 
-            this.btnDkyDV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDkyDV.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnDkyDV.Image = ((System.Drawing.Image)(resources.GetObject("btnDkyDV.Image")));
-            this.btnDkyDV.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDkyDV.Location = new System.Drawing.Point(443, 25);
-            this.btnDkyDV.Name = "btnDkyDV";
-            this.btnDkyDV.Size = new System.Drawing.Size(84, 75);
-            this.btnDkyDV.TabIndex = 12;
-            this.btnDkyDV.Text = "Đăng ký DV";
-            this.btnDkyDV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDkyDV.UseVisualStyleBackColor = true;
-            this.btnDkyDV.Click += new System.EventHandler(this.btnDkyDV_Click);
-            // 
             // frmPhieuDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,6 +431,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPhieuDangKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPhieuDangKy";
             this.Load += new System.EventHandler(this.frmPhieuDangKy_Load);
             this.groupBox4.ResumeLayout(false);

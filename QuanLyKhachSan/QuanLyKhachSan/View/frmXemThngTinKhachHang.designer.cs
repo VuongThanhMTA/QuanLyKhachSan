@@ -94,6 +94,7 @@
             this.ClientSize = new System.Drawing.Size(691, 270);
             this.Controls.Add(this.dgvThongTInKhachHang);
             this.Name = "frmXemThngTinKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin khách hàng đăng ký phòng";
             this.Load += new System.EventHandler(this.frmXemThngTinKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTInKhachHang)).EndInit();

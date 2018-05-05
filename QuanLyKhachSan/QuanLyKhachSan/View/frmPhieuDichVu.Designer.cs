@@ -306,7 +306,7 @@
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Name = "frmPhieuDichVu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPhieuDichVu";
             this.Load += new System.EventHandler(this.frmPhieuDichVu_Load);
             this.groupBox7.ResumeLayout(false);

@@ -107,11 +107,11 @@
             this.tpPhong.Controls.Add(this.btnSuaP);
             this.tpPhong.Controls.Add(this.btnThemP);
             this.tpPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpPhong.Location = new System.Drawing.Point(4, 31);
+            this.tpPhong.Location = new System.Drawing.Point(4, 28);
             this.tpPhong.Margin = new System.Windows.Forms.Padding(4);
             this.tpPhong.Name = "tpPhong";
             this.tpPhong.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPhong.Size = new System.Drawing.Size(1019, 507);
+            this.tpPhong.Size = new System.Drawing.Size(1019, 510);
             this.tpPhong.TabIndex = 0;
             this.tpPhong.Text = "Quản Lý Phòng";
             // 
@@ -120,7 +120,7 @@
             this.cbMaLoaiPhong.FormattingEnabled = true;
             this.cbMaLoaiPhong.Location = new System.Drawing.Point(639, 85);
             this.cbMaLoaiPhong.Name = "cbMaLoaiPhong";
-            this.cbMaLoaiPhong.Size = new System.Drawing.Size(248, 30);
+            this.cbMaLoaiPhong.Size = new System.Drawing.Size(248, 27);
             this.cbMaLoaiPhong.TabIndex = 51;
             // 
             // txtTrangThai
@@ -128,7 +128,7 @@
             this.txtTrangThai.Location = new System.Drawing.Point(641, 131);
             this.txtTrangThai.Margin = new System.Windows.Forms.Padding(6);
             this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(248, 30);
+            this.txtTrangThai.Size = new System.Drawing.Size(248, 26);
             this.txtTrangThai.TabIndex = 50;
             // 
             // label8
@@ -137,7 +137,7 @@
             this.label8.Location = new System.Drawing.Point(498, 139);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 22);
+            this.label8.Size = new System.Drawing.Size(76, 19);
             this.label8.TabIndex = 49;
             this.label8.Text = "Trạng Thái:";
             // 
@@ -147,7 +147,7 @@
             this.label7.Location = new System.Drawing.Point(496, 93);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 22);
+            this.label7.Size = new System.Drawing.Size(106, 19);
             this.label7.TabIndex = 47;
             this.label7.Text = "Mã Loại Phòng:";
             // 
@@ -159,7 +159,7 @@
             this.label6.Location = new System.Drawing.Point(318, 17);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(238, 37);
+            this.label6.Size = new System.Drawing.Size(198, 31);
             this.label6.TabIndex = 46;
             this.label6.Text = "Quản Lý Phòng";
             // 
@@ -168,7 +168,7 @@
             this.txtTenPhong.Location = new System.Drawing.Point(175, 130);
             this.txtTenPhong.Margin = new System.Windows.Forms.Padding(6);
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(248, 30);
+            this.txtTenPhong.Size = new System.Drawing.Size(248, 26);
             this.txtTenPhong.TabIndex = 45;
             // 
             // label4
@@ -177,7 +177,7 @@
             this.label4.Location = new System.Drawing.Point(29, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 22);
+            this.label4.Size = new System.Drawing.Size(81, 19);
             this.label4.TabIndex = 44;
             this.label4.Text = "Tên Phòng :";
             // 
@@ -186,7 +186,7 @@
             this.txtMaPhongP.Location = new System.Drawing.Point(175, 85);
             this.txtMaPhongP.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaPhongP.Name = "txtMaPhongP";
-            this.txtMaPhongP.Size = new System.Drawing.Size(248, 30);
+            this.txtMaPhongP.Size = new System.Drawing.Size(248, 26);
             this.txtMaPhongP.TabIndex = 43;
             // 
             // label5
@@ -195,7 +195,7 @@
             this.label5.Location = new System.Drawing.Point(29, 88);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 22);
+            this.label5.Size = new System.Drawing.Size(79, 19);
             this.label5.TabIndex = 42;
             this.label5.Text = "Mã  Phòng:";
             // 
@@ -210,7 +210,7 @@
             this.MaLoaiPhong1,
             this.TrangThai});
             this.dgvPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPhong.Location = new System.Drawing.Point(4, 251);
+            this.dgvPhong.Location = new System.Drawing.Point(4, 254);
             this.dgvPhong.Margin = new System.Windows.Forms.Padding(6);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.RowTemplate.Height = 24;
@@ -225,7 +225,7 @@
             this.STT1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.STT1.HeaderText = "STT";
             this.STT1.Name = "STT1";
-            this.STT1.Width = 74;
+            this.STT1.Width = 61;
             // 
             // MaPhong
             // 
@@ -375,11 +375,11 @@
             this.tpLoaiPhong.Controls.Add(this.label1);
             this.tpLoaiPhong.Controls.Add(this.dgvLoaiPhong);
             this.tpLoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpLoaiPhong.Location = new System.Drawing.Point(4, 31);
+            this.tpLoaiPhong.Location = new System.Drawing.Point(4, 28);
             this.tpLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.tpLoaiPhong.Name = "tpLoaiPhong";
             this.tpLoaiPhong.Padding = new System.Windows.Forms.Padding(4);
-            this.tpLoaiPhong.Size = new System.Drawing.Size(1019, 507);
+            this.tpLoaiPhong.Size = new System.Drawing.Size(1019, 510);
             this.tpLoaiPhong.TabIndex = 1;
             this.tpLoaiPhong.Text = "Quản Lý Loại Phong";
             // 
@@ -495,7 +495,7 @@
             this.label3.Location = new System.Drawing.Point(301, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(310, 37);
+            this.label3.Size = new System.Drawing.Size(259, 31);
             this.label3.TabIndex = 35;
             this.label3.Text = "Quản Lý Loại Phòng";
             // 
@@ -504,7 +504,7 @@
             this.txtLoaiPhong.Location = new System.Drawing.Point(660, 88);
             this.txtLoaiPhong.Margin = new System.Windows.Forms.Padding(6);
             this.txtLoaiPhong.Name = "txtLoaiPhong";
-            this.txtLoaiPhong.Size = new System.Drawing.Size(251, 30);
+            this.txtLoaiPhong.Size = new System.Drawing.Size(251, 26);
             this.txtLoaiPhong.TabIndex = 34;
             // 
             // label2
@@ -513,7 +513,7 @@
             this.label2.Location = new System.Drawing.Point(509, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 22);
+            this.label2.Size = new System.Drawing.Size(85, 19);
             this.label2.TabIndex = 33;
             this.label2.Text = "Loại Phòng :";
             // 
@@ -522,7 +522,7 @@
             this.txtMaLoaiPhongLP.Location = new System.Drawing.Point(206, 88);
             this.txtMaLoaiPhongLP.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaLoaiPhongLP.Name = "txtMaLoaiPhongLP";
-            this.txtMaLoaiPhongLP.Size = new System.Drawing.Size(251, 30);
+            this.txtMaLoaiPhongLP.Size = new System.Drawing.Size(251, 26);
             this.txtMaLoaiPhongLP.TabIndex = 32;
             // 
             // label1
@@ -531,7 +531,7 @@
             this.label1.Location = new System.Drawing.Point(55, 96);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 22);
+            this.label1.Size = new System.Drawing.Size(106, 19);
             this.label1.TabIndex = 31;
             this.label1.Text = "Mã Loại Phòng:";
             // 
@@ -544,7 +544,7 @@
             this.MaLoaiPhong,
             this.LoaiPhong});
             this.dgvLoaiPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvLoaiPhong.Location = new System.Drawing.Point(4, 230);
+            this.dgvLoaiPhong.Location = new System.Drawing.Point(4, 233);
             this.dgvLoaiPhong.Margin = new System.Windows.Forms.Padding(6);
             this.dgvLoaiPhong.Name = "dgvLoaiPhong";
             this.dgvLoaiPhong.RowTemplate.Height = 24;
@@ -559,7 +559,7 @@
             this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
-            this.STT.Width = 74;
+            this.STT.Width = 61;
             // 
             // MaLoaiPhong
             // 
@@ -577,7 +577,7 @@
             // 
             // frmPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 531);
             this.Controls.Add(this.tcPhong);
@@ -585,6 +585,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1228, 731);
             this.Name = "frmPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Phòng ";
             this.Load += new System.EventHandler(this.frmPhong_Load_1);
             this.tcPhong.ResumeLayout(false);
