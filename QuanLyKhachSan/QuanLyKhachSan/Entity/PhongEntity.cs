@@ -12,6 +12,14 @@ namespace QuanLyKhachSan.Entity
         private string _TenPhong;
         private string _MaLoaiPhong;
         private string _TrangThai;
+        private int _Gia;
+
+        public int Gia
+        {
+            get { return _Gia; }
+            set { _Gia = value; }
+        }
+
 
         public string MaPhong
         {

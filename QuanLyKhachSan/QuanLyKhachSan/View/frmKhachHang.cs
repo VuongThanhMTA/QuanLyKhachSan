@@ -202,9 +202,9 @@ namespace QuanLyKhachSan.View
             {
                 dgvKH.DataSource = bus.TimKiem(" SELECT * FROM dbo.KhachHang where MaKH like '%" + txtTimKiem.Text + "%'");
             }
-            if (cmbTimKiem.Text == "Theo Tên Khách Hàng")
+            if (cmbTimKiem.Text == "Theo Tên Khách hàng")
             {
-                dgvKH.DataSource = bus.TimKiem(" SELECT * FROM dbo.KhachHang where TenKH like '%" + txtTimKiem.Text + "%'");
+                dgvKH.DataSource = bus.TimKiem(" SELECT * FROM dbo.KhachHang where TenKH like N'%" + txtTimKiem.Text + "%'");
             }
             if (cmbTimKiem.Text == "Theo Giới Tính")
             {

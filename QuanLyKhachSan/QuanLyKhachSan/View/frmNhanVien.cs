@@ -199,15 +199,15 @@ namespace QuanLyKhachSan.View
         {
             if (cmbTimKiem.Text == "Theo Mã Nhân Viên")
             {
-                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Ma_NV like '%" + txtTimKiem.Text + "%'");
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where MaNV like '%" + txtTimKiem.Text + "%'");
             }
             if (cmbTimKiem.Text == "Theo Tên Nhân Viên")
             {
-                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Ten_NV like '%" + txtTimKiem.Text + "%'");
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where TenNV like N'%" + txtTimKiem.Text + "%'");
             }
             if (cmbTimKiem.Text == "Theo Giới Tính")
             {
-                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Gioi_Tinh like '%" + txtTimKiem.Text + "%'");
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where GioiTinh like '%" + txtTimKiem.Text + "%'");
             }
             if (cmbTimKiem.Text == "Theo Lương")
             {
@@ -219,7 +219,7 @@ namespace QuanLyKhachSan.View
             }
             if (cmbTimKiem.Text == "Theo Ngày Sinh")
             {
-                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where Ngay_Sinh like '%" + txtTimKiem.Text + "%'");
+                dgvNhanVien.DataSource = bus.TimKiem(" SELECT * FROM dbo.NhanVien where NgaySinh like '%" + txtTimKiem.Text + "%'");
             }
             if (cmbTimKiem.Text == "Theo CMTND")
             {
@@ -237,6 +237,11 @@ namespace QuanLyKhachSan.View
             DisEnl(false);
             txtTimKiem.Text = "";
             cmbTimKiem.Text = "";
+        }
+
+        private void dpNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

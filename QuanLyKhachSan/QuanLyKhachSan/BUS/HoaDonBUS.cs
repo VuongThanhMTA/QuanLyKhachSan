@@ -17,6 +17,16 @@ namespace QuanLyKhachSan.BUS
         {
             return dal.GetData();
         }
+        public DataTable DanhSachDatPhong()
+        {
+            return dal.DanhSachDatPhong();
+        }
+
+        public DataTable DanhSachDichVuSuDung(string maPhieuDK)
+        {
+
+            return dal.DanhSachDichVuSuDung(maPhieuDK);
+        }
 
         public int InsertData(HoaDonEntity hd)
         {

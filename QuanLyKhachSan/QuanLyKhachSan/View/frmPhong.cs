@@ -34,6 +34,7 @@ namespace QuanLyKhachSan.View
             txtTenPhong.Text = "";
             txtTrangThai.Text = "";
             cbMaLoaiPhong.Text = "";
+            txtGia.Text = "";
         }
 
         public void ClearTxt_LoaiPhong()
@@ -49,6 +50,7 @@ namespace QuanLyKhachSan.View
             txtTenPhong.Enabled = key;
             txtTrangThai.Enabled = key;
             cbMaLoaiPhong.Enabled = key;
+            txtGia.Enabled = key;
 
             btnThemP.Enabled = !key;
             btnSuaP.Enabled = !key;
@@ -62,6 +64,7 @@ namespace QuanLyKhachSan.View
         {
             txtMaLoaiPhongLP.Enabled = key;
             txtLoaiPhong.Enabled = key;
+            
 
             btnThemLP.Enabled = !key;
             btnSuaLP.Enabled = !key;
@@ -73,7 +76,8 @@ namespace QuanLyKhachSan.View
         public void HienThiMaLoaiPhong()
         {
             cbMaLoaiPhong.DataSource = loaiPhongBUS.GetData();
-            cbMaLoaiPhong.DisplayMember = "MaLoaiPhong";
+            cbMaLoaiPhong.ValueMember = "MaLoaiPhong";
+            cbMaLoaiPhong.DisplayMember = "LoaiPhong";
         }
 
         public void HienThi()
@@ -146,9 +150,10 @@ namespace QuanLyKhachSan.View
             else
             {
                 phongE.MaPhong = txtMaPhongP.Text;
-                phongE.MaLoaiPhong = cbMaLoaiPhong.Text;
+                phongE.MaLoaiPhong = cbMaLoaiPhong.SelectedValue.ToString();
                 phongE.TenPhong = txtTenPhong.Text;
                 phongE.TrangThai = txtTrangThai.Text;
+                phongE.Gia = Convert.ToInt32( txtGia.Text);
 
                 if (_clickBtnPhong == 0)
                 {
@@ -362,6 +367,11 @@ namespace QuanLyKhachSan.View
         private void dgvLoaiPhong_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             dgvLoaiPhong.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
+        }
+
+        private void tpPhong_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

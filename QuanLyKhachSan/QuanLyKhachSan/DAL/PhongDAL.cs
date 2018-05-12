@@ -26,7 +26,8 @@ namespace QuanLyKhachSan.DAL
                 new SqlParameter("MaPhong",p.MaPhong),
                 new SqlParameter("MaLoaiPhong",p.MaLoaiPhong),
                 new SqlParameter("TenPhong",p.TenPhong),
-                new SqlParameter("TrangThai",p.TrangThai)
+                new SqlParameter("TrangThai",p.TrangThai),
+                 new SqlParameter("Gia",p.Gia)
         };
             return _connect.ExcuteSQL("SP_ThemPhong ", para);
         }
@@ -38,7 +39,8 @@ namespace QuanLyKhachSan.DAL
                 new SqlParameter("MaPhong",p.MaPhong),
                 new SqlParameter("MaLoaiPhong",p.MaLoaiPhong),
                 new SqlParameter("TenPhong",p.TenPhong),
-                new SqlParameter("TrangThai",p.TrangThai)
+                new SqlParameter("TrangThai",p.TrangThai),
+                new SqlParameter("Gia",p.Gia)
             };
             return _connect.ExcuteSQL("SP_SuaPhong ", para);
         }

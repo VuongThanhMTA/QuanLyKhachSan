@@ -118,9 +118,9 @@ namespace QuanLyKhachSan.View
         private void btnLuu_Click(object sender, EventArgs e)
         {
             phieudk.MaPhieuDangKy = txtMaPhieuDk.Text;
-            phieudk.MaKhachHang = cmbMaKH.Text;
-            phieudk.MaNhanViebn = cmbMaNV.Text;
-            phieudk.MaPhong = cmbMaPhong.Text;
+            phieudk.MaKhachHang = cmbMaKH.SelectedValue.ToString();
+            phieudk.MaNhanViebn = cmbMaNV.SelectedValue.ToString();
+            phieudk.MaPhong = cmbMaPhong.SelectedValue.ToString();
             phieudk.NgayLap = Convert.ToDateTime(dateNgayLap.Text);
             phieudk.TienCoc = int.Parse(txtTienCoc.Text);
 
@@ -135,9 +135,9 @@ namespace QuanLyKhachSan.View
                     DisEnl(false);
                     fluu = 1;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi!");
+                    MessageBox.Show("Lỗi!" + ex);
                 }
             }
             else
@@ -193,11 +193,14 @@ namespace QuanLyKhachSan.View
         private void HienThi_MaLen_CB()
         {
             cmbMaNV.DataSource = phieudkbus.XemPhieuDK("select * from NhanVien");
-            cmbMaNV.DisplayMember = "MaNV";
+            cmbMaNV.ValueMember = "MaNV";
+            cmbMaNV.DisplayMember = "TenNV";
             cmbMaKH.DataSource = phieudkbus.XemPhieuDK("select * from KhachHang");
-            cmbMaKH.DisplayMember = "MaKH";
+            cmbMaKH.ValueMember = "MaKH";
+            cmbMaKH.DisplayMember = "TenKH";
             cmbMaPhong.DataSource = phieudkbus.XemPhieuDK("select * from Phong");
-            cmbMaPhong.DisplayMember = "MaPhong";
+            cmbMaPhong.ValueMember = "MaPhong";
+            cmbMaPhong.DisplayMember = "TenPhong";
         }
         private void dgvPhieuDK_DoubleClick(object sender, EventArgs e)
         {
@@ -234,6 +237,20 @@ namespace QuanLyKhachSan.View
                 this.Show();
             }
 
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            DataRowView d = (DataRowView)cmbMaPhong.SelectedItem;
+
+            
+            txtTienCoc.Text = d.Row["Gia"].ToString();
         }
     }
 }

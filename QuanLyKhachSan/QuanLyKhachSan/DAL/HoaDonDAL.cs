@@ -15,9 +15,19 @@ namespace QuanLyKhachSan.DAL
 
         public DataTable GetData()
         {
-            return _connect.GetData("SP_HoaDonSelectAll", null);
+            return _connect.GetData("SP_DanhSachHoaDon", null);
         }
 
+        public DataTable DanhSachDatPhong()
+        {
+            return _connect.GetData("SP_DanhSachPhieuDangKy", null);
+        }
+
+        public DataTable DanhSachDichVuSuDung(string maPhieuDK)
+        {
+            SqlParameter[] para = { new SqlParameter("MaPhieuDK", maPhieuDK) };
+            return _connect.GetData("SP_DanhSachDichVuSuDung", para);
+        }
         public int InsertData(HoaDonEntity hd)
         {
             SqlParameter[] para =
@@ -25,8 +35,8 @@ namespace QuanLyKhachSan.DAL
                 new SqlParameter("MaHD",hd.MaHD),
                 new SqlParameter("MaNV",hd.MaNV),
                 new SqlParameter("MaPhieuDK",hd.MaPhieuDK),
-                new SqlParameter("NgayThanhToan",hd.NgayThanhToan),
-                new SqlParameter("TongTien",hd.TongTien)
+                new SqlParameter("NgayThanhToan",hd.NgayThanhToan)
+                //new SqlParameter("TongTien",hd.TongTien)
         };
             return _connect.ExcuteSQL("SP_ThemHoaDon ", para);
         }
@@ -39,8 +49,8 @@ namespace QuanLyKhachSan.DAL
                 new SqlParameter("MaHD",hd.MaHD),
                 new SqlParameter("MaNV",hd.MaNV),
                 new SqlParameter("MaPhieuDK",hd.MaPhieuDK),
-                new SqlParameter("NgayThanhToan",hd.NgayThanhToan),
-                new SqlParameter("TongTien",hd.TongTien)
+                new SqlParameter("NgayThanhToan",hd.NgayThanhToan)
+                //new SqlParameter("TongTien",hd.TongTien)
 
             };
             return _connect.ExcuteSQL("SP_SuaHoaDon ", para);

@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +68,11 @@
     <Compile Include="DAL\PhieuDangKyDAL.cs" />
     <Compile Include="DAL\PhieuDichVuDAL.cs" />
     <Compile Include="DAL\PhongDAL.cs" />
+    <Compile Include="DataSetQLKS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetQLKS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entity\DichVuEntity.cs" />
     <Compile Include="Entity\HoaDonEntity.cs" />
     <Compile Include="Entity\KhachHangEntity.cs" />
@@ -99,6 +107,12 @@
     </Compile>
     <Compile Include="View\frmhuongdan.designer.cs">
       <DependentUpon>frmhuongdan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmInHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmInHoaDon.Designer.cs">
+      <DependentUpon>frmInHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmKhachHang.cs">
       <SubType>Form</SubType>
@@ -164,6 +178,9 @@
     <EmbeddedResource Include="View\frmhuongdan.resx">
       <DependentUpon>frmhuongdan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmInHoaDon.resx">
+      <DependentUpon>frmInHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +202,18 @@
     <EmbeddedResource Include="View\frmXemThngTinKhachHang.resx">
       <DependentUpon>frmXemThngTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\rpHoaDon.rdlc" />
+    <None Include="DataSetQLKS.xsc">
+      <DependentUpon>DataSetQLKS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetQLKS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetQLKS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetQLKS.xss">
+      <DependentUpon>DataSetQLKS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

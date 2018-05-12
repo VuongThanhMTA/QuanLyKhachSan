@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QuanLyKhachSan.View
+{
+    public partial class frmInHoaDon : Form
+    {
+        public frmInHoaDon()
+        {
+            InitializeComponent();
+        }
+
+        private void frmInHoaDon_Load(object sender, EventArgs e)
+        {
+            this.chiTietHoaDonTableAdapter.Fill(this.dataSetQLKS.ChiTietHoaDon,frmHoaDon.maPhieuDK);
+            this.rpvInHoaDon.RefreshReport();
+          
+        }
+    }
+}

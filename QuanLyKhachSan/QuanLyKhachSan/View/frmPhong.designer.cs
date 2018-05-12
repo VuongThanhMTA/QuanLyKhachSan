@@ -41,11 +41,6 @@
             this.txtMaPhongP = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
-            this.STT1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLoaiPhong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHuyP = new System.Windows.Forms.Button();
             this.btnLuuP = new System.Windows.Forms.Button();
             this.btnThoatP = new System.Windows.Forms.Button();
@@ -68,6 +63,14 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtGia = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.STT1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLoaiPhong1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcPhong.SuspendLayout();
             this.tpPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -79,17 +82,20 @@
             // 
             this.tcPhong.Controls.Add(this.tpPhong);
             this.tcPhong.Controls.Add(this.tpLoaiPhong);
+            this.tcPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcPhong.Location = new System.Drawing.Point(0, 0);
             this.tcPhong.Margin = new System.Windows.Forms.Padding(4);
             this.tcPhong.Name = "tcPhong";
             this.tcPhong.SelectedIndex = 0;
-            this.tcPhong.Size = new System.Drawing.Size(1027, 542);
+            this.tcPhong.Size = new System.Drawing.Size(1028, 672);
             this.tcPhong.TabIndex = 0;
             // 
             // tpPhong
             // 
             this.tpPhong.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tpPhong.Controls.Add(this.txtGia);
+            this.tpPhong.Controls.Add(this.label9);
             this.tpPhong.Controls.Add(this.cbMaLoaiPhong);
             this.tpPhong.Controls.Add(this.txtTrangThai);
             this.tpPhong.Controls.Add(this.label8);
@@ -107,20 +113,21 @@
             this.tpPhong.Controls.Add(this.btnSuaP);
             this.tpPhong.Controls.Add(this.btnThemP);
             this.tpPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpPhong.Location = new System.Drawing.Point(4, 28);
+            this.tpPhong.Location = new System.Drawing.Point(4, 31);
             this.tpPhong.Margin = new System.Windows.Forms.Padding(4);
             this.tpPhong.Name = "tpPhong";
             this.tpPhong.Padding = new System.Windows.Forms.Padding(4);
-            this.tpPhong.Size = new System.Drawing.Size(1019, 510);
+            this.tpPhong.Size = new System.Drawing.Size(1020, 637);
             this.tpPhong.TabIndex = 0;
             this.tpPhong.Text = "Quản Lý Phòng";
+            this.tpPhong.Click += new System.EventHandler(this.tpPhong_Click);
             // 
             // cbMaLoaiPhong
             // 
             this.cbMaLoaiPhong.FormattingEnabled = true;
             this.cbMaLoaiPhong.Location = new System.Drawing.Point(639, 85);
             this.cbMaLoaiPhong.Name = "cbMaLoaiPhong";
-            this.cbMaLoaiPhong.Size = new System.Drawing.Size(248, 27);
+            this.cbMaLoaiPhong.Size = new System.Drawing.Size(248, 30);
             this.cbMaLoaiPhong.TabIndex = 51;
             // 
             // txtTrangThai
@@ -128,7 +135,7 @@
             this.txtTrangThai.Location = new System.Drawing.Point(641, 131);
             this.txtTrangThai.Margin = new System.Windows.Forms.Padding(6);
             this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(248, 26);
+            this.txtTrangThai.Size = new System.Drawing.Size(248, 30);
             this.txtTrangThai.TabIndex = 50;
             // 
             // label8
@@ -137,7 +144,7 @@
             this.label8.Location = new System.Drawing.Point(498, 139);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 19);
+            this.label8.Size = new System.Drawing.Size(102, 22);
             this.label8.TabIndex = 49;
             this.label8.Text = "Trạng Thái:";
             // 
@@ -147,7 +154,7 @@
             this.label7.Location = new System.Drawing.Point(496, 93);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 19);
+            this.label7.Size = new System.Drawing.Size(136, 22);
             this.label7.TabIndex = 47;
             this.label7.Text = "Mã Loại Phòng:";
             // 
@@ -159,7 +166,7 @@
             this.label6.Location = new System.Drawing.Point(318, 17);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(198, 31);
+            this.label6.Size = new System.Drawing.Size(238, 37);
             this.label6.TabIndex = 46;
             this.label6.Text = "Quản Lý Phòng";
             // 
@@ -168,7 +175,7 @@
             this.txtTenPhong.Location = new System.Drawing.Point(175, 130);
             this.txtTenPhong.Margin = new System.Windows.Forms.Padding(6);
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(248, 26);
+            this.txtTenPhong.Size = new System.Drawing.Size(248, 30);
             this.txtTenPhong.TabIndex = 45;
             // 
             // label4
@@ -177,7 +184,7 @@
             this.label4.Location = new System.Drawing.Point(29, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 19);
+            this.label4.Size = new System.Drawing.Size(104, 22);
             this.label4.TabIndex = 44;
             this.label4.Text = "Tên Phòng :";
             // 
@@ -186,7 +193,7 @@
             this.txtMaPhongP.Location = new System.Drawing.Point(175, 85);
             this.txtMaPhongP.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaPhongP.Name = "txtMaPhongP";
-            this.txtMaPhongP.Size = new System.Drawing.Size(248, 26);
+            this.txtMaPhongP.Size = new System.Drawing.Size(248, 30);
             this.txtMaPhongP.TabIndex = 43;
             // 
             // label5
@@ -195,7 +202,7 @@
             this.label5.Location = new System.Drawing.Point(29, 88);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 19);
+            this.label5.Size = new System.Drawing.Size(100, 22);
             this.label5.TabIndex = 42;
             this.label5.Text = "Mã  Phòng:";
             // 
@@ -208,52 +215,18 @@
             this.MaPhong,
             this.TenPhong,
             this.MaLoaiPhong1,
+            this.Gia,
             this.TrangThai});
             this.dgvPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPhong.Location = new System.Drawing.Point(4, 254);
+            this.dgvPhong.Location = new System.Drawing.Point(4, 311);
             this.dgvPhong.Margin = new System.Windows.Forms.Padding(6);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.RowTemplate.Height = 24;
             this.dgvPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhong.Size = new System.Drawing.Size(1011, 252);
+            this.dgvPhong.Size = new System.Drawing.Size(1012, 322);
             this.dgvPhong.TabIndex = 41;
             this.dgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellClick);
             this.dgvPhong.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvPhong_RowPrePaint);
-            // 
-            // STT1
-            // 
-            this.STT1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.STT1.HeaderText = "STT";
-            this.STT1.Name = "STT1";
-            this.STT1.Width = 61;
-            // 
-            // MaPhong
-            // 
-            this.MaPhong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaPhong.DataPropertyName = "MaPhong";
-            this.MaPhong.HeaderText = "Mã Phòng";
-            this.MaPhong.Name = "MaPhong";
-            // 
-            // TenPhong
-            // 
-            this.TenPhong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenPhong.DataPropertyName = "TenPhong";
-            this.TenPhong.HeaderText = "Tên Phòng";
-            this.TenPhong.Name = "TenPhong";
-            // 
-            // MaLoaiPhong1
-            // 
-            this.MaLoaiPhong1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaLoaiPhong1.DataPropertyName = "MaLoaiPhong";
-            this.MaLoaiPhong1.HeaderText = "Mã Loại Phòng";
-            this.MaLoaiPhong1.Name = "MaLoaiPhong1";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
             // 
             // btnHuyP
             // 
@@ -263,7 +236,7 @@
             this.btnHuyP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnHuyP.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyP.Image")));
             this.btnHuyP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuyP.Location = new System.Drawing.Point(598, 185);
+            this.btnHuyP.Location = new System.Drawing.Point(619, 245);
             this.btnHuyP.Margin = new System.Windows.Forms.Padding(6);
             this.btnHuyP.Name = "btnHuyP";
             this.btnHuyP.Size = new System.Drawing.Size(80, 54);
@@ -281,7 +254,7 @@
             this.btnLuuP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLuuP.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuP.Image")));
             this.btnLuuP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuuP.Location = new System.Drawing.Point(476, 184);
+            this.btnLuuP.Location = new System.Drawing.Point(497, 244);
             this.btnLuuP.Margin = new System.Windows.Forms.Padding(6);
             this.btnLuuP.Name = "btnLuuP";
             this.btnLuuP.Size = new System.Drawing.Size(83, 54);
@@ -298,7 +271,7 @@
             this.btnThoatP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThoatP.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatP.Image")));
             this.btnThoatP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoatP.Location = new System.Drawing.Point(719, 185);
+            this.btnThoatP.Location = new System.Drawing.Point(740, 245);
             this.btnThoatP.Margin = new System.Windows.Forms.Padding(6);
             this.btnThoatP.Name = "btnThoatP";
             this.btnThoatP.Size = new System.Drawing.Size(79, 54);
@@ -315,7 +288,7 @@
             this.btnXoaP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnXoaP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaP.Image")));
             this.btnXoaP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoaP.Location = new System.Drawing.Point(365, 184);
+            this.btnXoaP.Location = new System.Drawing.Point(386, 244);
             this.btnXoaP.Margin = new System.Windows.Forms.Padding(6);
             this.btnXoaP.Name = "btnXoaP";
             this.btnXoaP.Size = new System.Drawing.Size(81, 53);
@@ -332,7 +305,7 @@
             this.btnSuaP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSuaP.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaP.Image")));
             this.btnSuaP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSuaP.Location = new System.Drawing.Point(256, 183);
+            this.btnSuaP.Location = new System.Drawing.Point(277, 243);
             this.btnSuaP.Margin = new System.Windows.Forms.Padding(6);
             this.btnSuaP.Name = "btnSuaP";
             this.btnSuaP.Size = new System.Drawing.Size(78, 54);
@@ -349,7 +322,7 @@
             this.btnThemP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThemP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemP.Image")));
             this.btnThemP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThemP.Location = new System.Drawing.Point(154, 185);
+            this.btnThemP.Location = new System.Drawing.Point(175, 245);
             this.btnThemP.Margin = new System.Windows.Forms.Padding(6);
             this.btnThemP.Name = "btnThemP";
             this.btnThemP.Size = new System.Drawing.Size(77, 53);
@@ -375,11 +348,11 @@
             this.tpLoaiPhong.Controls.Add(this.label1);
             this.tpLoaiPhong.Controls.Add(this.dgvLoaiPhong);
             this.tpLoaiPhong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpLoaiPhong.Location = new System.Drawing.Point(4, 28);
+            this.tpLoaiPhong.Location = new System.Drawing.Point(4, 31);
             this.tpLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.tpLoaiPhong.Name = "tpLoaiPhong";
             this.tpLoaiPhong.Padding = new System.Windows.Forms.Padding(4);
-            this.tpLoaiPhong.Size = new System.Drawing.Size(1019, 510);
+            this.tpLoaiPhong.Size = new System.Drawing.Size(1020, 637);
             this.tpLoaiPhong.TabIndex = 1;
             this.tpLoaiPhong.Text = "Quản Lý Loại Phong";
             // 
@@ -391,7 +364,7 @@
             this.btnHuyLP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnHuyLP.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyLP.Image")));
             this.btnHuyLP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuyLP.Location = new System.Drawing.Point(674, 148);
+            this.btnHuyLP.Location = new System.Drawing.Point(676, 192);
             this.btnHuyLP.Margin = new System.Windows.Forms.Padding(6);
             this.btnHuyLP.Name = "btnHuyLP";
             this.btnHuyLP.Size = new System.Drawing.Size(79, 54);
@@ -409,7 +382,7 @@
             this.btnLuuLP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLuuLP.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuLP.Image")));
             this.btnLuuLP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuuLP.Location = new System.Drawing.Point(532, 147);
+            this.btnLuuLP.Location = new System.Drawing.Point(534, 191);
             this.btnLuuLP.Margin = new System.Windows.Forms.Padding(6);
             this.btnLuuLP.Name = "btnLuuLP";
             this.btnLuuLP.Size = new System.Drawing.Size(79, 54);
@@ -426,7 +399,7 @@
             this.btnThoatLP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThoatLP.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatLP.Image")));
             this.btnThoatLP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoatLP.Location = new System.Drawing.Point(815, 148);
+            this.btnThoatLP.Location = new System.Drawing.Point(817, 192);
             this.btnThoatLP.Margin = new System.Windows.Forms.Padding(6);
             this.btnThoatLP.Name = "btnThoatLP";
             this.btnThoatLP.Size = new System.Drawing.Size(87, 54);
@@ -443,7 +416,7 @@
             this.btnXoaLP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnXoaLP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaLP.Image")));
             this.btnXoaLP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoaLP.Location = new System.Drawing.Point(400, 149);
+            this.btnXoaLP.Location = new System.Drawing.Point(402, 193);
             this.btnXoaLP.Margin = new System.Windows.Forms.Padding(6);
             this.btnXoaLP.Name = "btnXoaLP";
             this.btnXoaLP.Size = new System.Drawing.Size(80, 53);
@@ -460,7 +433,7 @@
             this.btnSuaLP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSuaLP.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaLP.Image")));
             this.btnSuaLP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSuaLP.Location = new System.Drawing.Point(272, 147);
+            this.btnSuaLP.Location = new System.Drawing.Point(274, 191);
             this.btnSuaLP.Margin = new System.Windows.Forms.Padding(6);
             this.btnSuaLP.Name = "btnSuaLP";
             this.btnSuaLP.Size = new System.Drawing.Size(77, 54);
@@ -477,7 +450,7 @@
             this.btnThemLP.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnThemLP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemLP.Image")));
             this.btnThemLP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThemLP.Location = new System.Drawing.Point(171, 148);
+            this.btnThemLP.Location = new System.Drawing.Point(173, 192);
             this.btnThemLP.Margin = new System.Windows.Forms.Padding(6);
             this.btnThemLP.Name = "btnThemLP";
             this.btnThemLP.Size = new System.Drawing.Size(70, 53);
@@ -495,7 +468,7 @@
             this.label3.Location = new System.Drawing.Point(301, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(259, 31);
+            this.label3.Size = new System.Drawing.Size(310, 37);
             this.label3.TabIndex = 35;
             this.label3.Text = "Quản Lý Loại Phòng";
             // 
@@ -504,7 +477,7 @@
             this.txtLoaiPhong.Location = new System.Drawing.Point(660, 88);
             this.txtLoaiPhong.Margin = new System.Windows.Forms.Padding(6);
             this.txtLoaiPhong.Name = "txtLoaiPhong";
-            this.txtLoaiPhong.Size = new System.Drawing.Size(251, 26);
+            this.txtLoaiPhong.Size = new System.Drawing.Size(251, 30);
             this.txtLoaiPhong.TabIndex = 34;
             // 
             // label2
@@ -513,7 +486,7 @@
             this.label2.Location = new System.Drawing.Point(509, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 19);
+            this.label2.Size = new System.Drawing.Size(110, 22);
             this.label2.TabIndex = 33;
             this.label2.Text = "Loại Phòng :";
             // 
@@ -522,7 +495,7 @@
             this.txtMaLoaiPhongLP.Location = new System.Drawing.Point(206, 88);
             this.txtMaLoaiPhongLP.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaLoaiPhongLP.Name = "txtMaLoaiPhongLP";
-            this.txtMaLoaiPhongLP.Size = new System.Drawing.Size(251, 26);
+            this.txtMaLoaiPhongLP.Size = new System.Drawing.Size(251, 30);
             this.txtMaLoaiPhongLP.TabIndex = 32;
             // 
             // label1
@@ -531,7 +504,7 @@
             this.label1.Location = new System.Drawing.Point(55, 96);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.Size = new System.Drawing.Size(136, 22);
             this.label1.TabIndex = 31;
             this.label1.Text = "Mã Loại Phòng:";
             // 
@@ -544,12 +517,12 @@
             this.MaLoaiPhong,
             this.LoaiPhong});
             this.dgvLoaiPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvLoaiPhong.Location = new System.Drawing.Point(4, 233);
+            this.dgvLoaiPhong.Location = new System.Drawing.Point(4, 258);
             this.dgvLoaiPhong.Margin = new System.Windows.Forms.Padding(6);
             this.dgvLoaiPhong.Name = "dgvLoaiPhong";
             this.dgvLoaiPhong.RowTemplate.Height = 24;
             this.dgvLoaiPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoaiPhong.Size = new System.Drawing.Size(1011, 273);
+            this.dgvLoaiPhong.Size = new System.Drawing.Size(1012, 375);
             this.dgvLoaiPhong.TabIndex = 30;
             this.dgvLoaiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiPhong_CellClick);
             this.dgvLoaiPhong.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvLoaiPhong_RowPrePaint);
@@ -559,7 +532,7 @@
             this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
-            this.STT.Width = 61;
+            this.STT.Width = 74;
             // 
             // MaLoaiPhong
             // 
@@ -575,11 +548,71 @@
             this.LoaiPhong.HeaderText = "Loại Phòng";
             this.LoaiPhong.Name = "LoaiPhong";
             // 
+            // txtGia
+            // 
+            this.txtGia.Location = new System.Drawing.Point(175, 182);
+            this.txtGia.Margin = new System.Windows.Forms.Padding(6);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(248, 30);
+            this.txtGia.TabIndex = 53;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 190);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 22);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "Giá :";
+            // 
+            // STT1
+            // 
+            this.STT1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.STT1.HeaderText = "STT";
+            this.STT1.Name = "STT1";
+            this.STT1.Width = 74;
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.HeaderText = "Mã Phòng";
+            this.MaPhong.Name = "MaPhong";
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Tên Phòng";
+            this.TenPhong.Name = "TenPhong";
+            // 
+            // MaLoaiPhong1
+            // 
+            this.MaLoaiPhong1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaLoaiPhong1.DataPropertyName = "MaLoaiPhong";
+            this.MaLoaiPhong1.HeaderText = "Mã Loại Phòng";
+            this.MaLoaiPhong1.Name = "MaLoaiPhong1";
+            // 
+            // Gia
+            // 
+            this.Gia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gia.DataPropertyName = "Gia";
+            this.Gia.HeaderText = "Giá";
+            this.Gia.Name = "Gia";
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            // 
             // frmPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 531);
+            this.ClientSize = new System.Drawing.Size(1028, 672);
             this.Controls.Add(this.tcPhong);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -616,11 +649,6 @@
         private System.Windows.Forms.TextBox txtMaPhongP;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiPhong1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.Button btnHuyP;
         private System.Windows.Forms.Button btnLuuP;
         private System.Windows.Forms.Button btnThoatP;
@@ -640,5 +668,13 @@
         private System.Windows.Forms.Button btnXoaLP;
         private System.Windows.Forms.Button btnSuaLP;
         private System.Windows.Forms.Button btnThemLP;
+        private System.Windows.Forms.TextBox txtGia;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiPhong1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }
