@@ -1,4 +1,8 @@
 ﻿USE QuanLyKhachSan
+GO 
+ALTER TABLE dbo.PhieuDichVu ADD TongTien INT 
+ALTER TABLE dbo.Phong ADD Gia INT
+
 
 --loại phòng
 GO 
