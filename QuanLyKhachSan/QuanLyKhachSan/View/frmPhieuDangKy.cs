@@ -117,10 +117,21 @@ namespace QuanLyKhachSan.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (cmbMaKH.Text=="" || cmbMaNV.Text=="" || cmbMaPhong.Text=="" || txtTienCoc.Text=="")
+            {
+                MessageBox.Show("Bạn chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            float a;
+            if (!float.TryParse(txtTienCoc.Text, out a))
+            {
+                MessageBox.Show("Nhập tiền không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             phieudk.MaPhieuDangKy = txtMaPhieuDk.Text;
-            phieudk.MaKhachHang = cmbMaKH.SelectedValue.ToString();
-            phieudk.MaNhanViebn = cmbMaNV.SelectedValue.ToString();
-            phieudk.MaPhong = cmbMaPhong.SelectedValue.ToString();
+            phieudk.MaKhachHang = cmbMaKH.Text;
+            phieudk.MaNhanViebn = cmbMaNV.Text;
+            phieudk.MaPhong = cmbMaPhong.Text;
             phieudk.NgayLap = Convert.ToDateTime(dateNgayLap.Text);
             phieudk.TienCoc = int.Parse(txtTienCoc.Text);
 
@@ -193,14 +204,14 @@ namespace QuanLyKhachSan.View
         private void HienThi_MaLen_CB()
         {
             cmbMaNV.DataSource = phieudkbus.XemPhieuDK("select * from NhanVien");
-            cmbMaNV.ValueMember = "MaNV";
-            cmbMaNV.DisplayMember = "TenNV";
+            //cmbMaNV.ValueMember = "MaNV";
+            cmbMaNV.DisplayMember = "MaNV";
             cmbMaKH.DataSource = phieudkbus.XemPhieuDK("select * from KhachHang");
-            cmbMaKH.ValueMember = "MaKH";
-            cmbMaKH.DisplayMember = "TenKH";
+            //cmbMaKH.ValueMember = "MaKH";
+            cmbMaKH.DisplayMember = "MaKH";
             cmbMaPhong.DataSource = phieudkbus.XemPhieuDK("select * from Phong");
-            cmbMaPhong.ValueMember = "MaPhong";
-            cmbMaPhong.DisplayMember = "TenPhong";
+           // cmbMaPhong.ValueMember = "MaPhong";
+            cmbMaPhong.DisplayMember = "MaPhong";
         }
         private void dgvPhieuDK_DoubleClick(object sender, EventArgs e)
         {
@@ -246,10 +257,7 @@ namespace QuanLyKhachSan.View
 
         private void cmbMaPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             DataRowView d = (DataRowView)cmbMaPhong.SelectedItem;
-
-            
             txtTienCoc.Text = d.Row["Gia"].ToString();
         }
     }

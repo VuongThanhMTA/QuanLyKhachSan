@@ -124,3 +124,37 @@ G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\pt\Microsoft.Sq
 G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 G:\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmDangNhap.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmDichVu.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmHoaDon.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmhuongdan.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmInHoaDon.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmKhachHang.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmMain.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmNhanVien.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhieuDangKy.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhieuDichVu.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmPhong.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmXemThngTinKhachHang.resources
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\RdlCompile.cache
+C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\RdlCompile.compiled
