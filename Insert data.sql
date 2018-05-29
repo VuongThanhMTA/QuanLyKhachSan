@@ -91,3 +91,73 @@ VALUES  ( 'DV10', -- MaDV - varchar(10)
           N'Buffe', -- TenDV - nvarchar(50)
           200000  -- Gia - bigint
           )
+go
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK01', -- MaPhieuDK - varchar(10)
+          'DV01', -- MaDV - varchar(10)
+          2  -- SoLuong - int
+          )
+go
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK01', -- MaPhieuDK - varchar(10)
+          'DV02', -- MaDV - varchar(10)
+          2  -- SoLuong - int
+          )
+go
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK01', -- MaPhieuDK - varchar(10)
+          'DV03', -- MaDV - varchar(10)
+          2  -- SoLuong - int
+          )
+go
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK02', -- MaPhieuDK - varchar(10)
+          'DV04', -- MaDV - varchar(10)
+          1  -- SoLuong - int
+          )
+GO
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK02', -- MaPhieuDK - varchar(10)
+          'DV06', -- MaDV - varchar(10)
+          1  -- SoLuong - int
+          )
+GO
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK03', -- MaPhieuDK - varchar(10)
+          'DV02', -- MaDV - varchar(10)
+          4  -- SoLuong - int
+          )
+GO
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK03', -- MaPhieuDK - varchar(10)
+          'DV03', -- MaDV - varchar(10)
+          4  -- SoLuong - int
+          )
+GO
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK04', -- MaPhieuDK - varchar(10)
+          'DV07', -- MaDV - varchar(10)
+          2 -- SoLuong - int
+          )
+GO
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK04', -- MaPhieuDK - varchar(10)
+          'DV02', -- MaDV - varchar(10)
+          2 -- SoLuong - int
+          )
+GO
+INSERT INTO dbo.PhieuDichVu
+        ( MaPhieuDK, MaDV, SoLuong )
+VALUES  ( 'DK05', -- MaPhieuDK - varchar(10)
+          'DV01', -- MaDV - varchar(10)
+          3 -- SoLuong - int
+          )
