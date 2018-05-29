@@ -56,3 +56,38 @@ VALUES  ( 'DV05', -- MaDV - varchar(10)
           N'Thuê xe máy', -- TenDV - nvarchar(50)
           100000  -- Gia - bigint
           )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV06', -- MaDV - varchar(10)
+          N'Team Building', -- TenDV - nvarchar(50)
+          150000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV07', -- MaDV - varchar(10)
+          N'Tổ chức sinh nhật', -- TenDV - nvarchar(50)
+          500000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV08', -- MaDV - varchar(10)
+          N'Caffe Phim', -- TenDV - nvarchar(50)
+          150000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV09', -- MaDV - varchar(10)
+          N'Giải khát', -- TenDV - nvarchar(50)
+          50000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV10', -- MaDV - varchar(10)
+          N'Buffe', -- TenDV - nvarchar(50)
+          200000  -- Gia - bigint
+          )
