@@ -20,3 +20,39 @@ INSERT dbo.KhachHang
 VALUES  ( 'KH09' , N'Đàm Vĩnh Hưng' ,N'Nam' ,N'Hồ Chí Minh' ,N'12498789' , N'0169568675' ,1989)
 INSERT dbo.KhachHang
 VALUES  ( 'KH10' , N'Phan Đình Tùng' ,N'Nam' ,N'Hà Nội' ,N'4566458757' , N'0169653258' ,1985)
+
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV01', -- MaDV - varchar(10)
+          N'Ăn sáng', -- TenDV - nvarchar(50)
+          30000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV02', -- MaDV - varchar(10)
+          N'Ăn trưa', -- TenDV - nvarchar(50)
+          50000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV03', -- MaDV - varchar(10)
+          N'Ăn tối', -- TenDV - nvarchar(50)
+          60000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV04', -- MaDV - varchar(10)
+          N'Thuê xe đạp', -- TenDV - nvarchar(50)
+          30000  -- Gia - bigint
+          )
+GO
+INSERT INTO dbo.DichVu
+        ( MaDV, TenDV, Gia )
+VALUES  ( 'DV05', -- MaDV - varchar(10)
+          N'Thuê xe máy', -- TenDV - nvarchar(50)
+          100000  -- Gia - bigint
+          )
