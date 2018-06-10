@@ -94,7 +94,7 @@ BEGIN
 END
 
 GO 
-ALTER PROC XemPhong 
+CREATE PROC XemPhong 
 AS
 BEGIN
 	SELECT p.MaPhong,lp.LoaiPhong,p.TenPhong,p.TrangThai,p.Gia

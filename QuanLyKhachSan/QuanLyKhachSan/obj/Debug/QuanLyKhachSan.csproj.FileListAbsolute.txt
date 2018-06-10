@@ -158,3 +158,18 @@ C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\
 C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
 C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\RdlCompile.cache
 C:\Users\ADMIN\Desktop\project ttn\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\RdlCompile.compiled
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmDangNhap.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmhuongdan.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmInHoaDon.resources
+C:\Users\NgocAnh\Documents\GitHub\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.View.frmMain.resources

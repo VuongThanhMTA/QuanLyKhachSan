@@ -98,55 +98,57 @@ namespace QuanLyKhachSan.View
             {
                 MessageBox.Show("Bạn chưa nhập mã dịch vụ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtTenDV.Text == "")
+            else if (txtTenDV.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập tên dịch vụ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (txtGia.Text == "")
+            else if(txtGia.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập giá dịch vụ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
-            int _gia;
-            int.TryParse(txtGia.Text, out _gia);
-
-            obj.MaDV = txtMaDV.Text;
-            obj.TenDV = txtTenDV.Text;
-            obj.Gia = _gia;
-           
-
-            if (txtMaDV.Text != "" && txtTenDV.Text != "" && txtGia.Text != ""  && fluu == 0)
+            else
             {
-                try
+                int _gia;
+                int.TryParse(txtGia.Text, out _gia);
+
+                obj.MaDV = txtMaDV.Text;
+                obj.TenDV = txtTenDV.Text;
+                obj.Gia = _gia;
+
+
+                if (txtMaDV.Text != "" && txtTenDV.Text != "" && txtGia.Text != "" && fluu == 0)
                 {
-                    Bus.InsertData(obj);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    frmDichVu_Load(sender, e);
-                    clearData();
-                    DisEnl(false);
-                    fluu = 1;
+                    try
+                    {
+                        Bus.InsertData(obj);
+                        MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        frmDichVu_Load(sender, e);
+                        clearData();
+                        DisEnl(false);
+                        fluu = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi" + ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else if (txtMaDV.Text != "" && txtTenDV.Text != "" && txtGia.Text != "" && fluu != 0)
                 {
-                    MessageBox.Show("Lỗi" + ex.Message);
-                }
-            }
-            else if (txtMaDV.Text != "" && txtTenDV.Text != "" && txtGia.Text != "" && fluu != 0)
-            {
-                try
-                {
-                    Bus.UpdateData(obj);
-                    MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    frmDichVu_Load(sender, e);
-                    clearData();
-                    DisEnl(false);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi" + ex.Message);
-                }
+                    try
+                    {
+                        Bus.UpdateData(obj);
+                        MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        frmDichVu_Load(sender, e);
+                        clearData();
+                        DisEnl(false);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi" + ex.Message);
+                    }
+                }              
             }
         }
 
